@@ -15,16 +15,16 @@ class CreateActivitesTable extends Migration
     {
         Schema::create('activites', function (Blueprint $table) {
             $table->Increments('id');
-            $table->string('Nom_activité',100);
-            $table->date('Date_activité');
-            $table->dateTime('Temps_activité');
+            $table->string('Nom_activités',100);
+            $table->date('Date_activités');
+            $table->dateTime('Temps_activités');
             
         });
     }
 
     /**
      * Reverse the migrations.
-     *
+
      * @return void
      */
     public function down()

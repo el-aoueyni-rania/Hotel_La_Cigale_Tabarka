@@ -11,8 +11,12 @@ class Bienetre extends Model
     public $incrementing = false ;
 
 
-    //relation hasMany to Users
-        //public function users(){
-        //    return $this->HasMany('App\User');
-        //}
+    //relation hasMany to Utilasateurs
+    public function Utilisateur(){
+        return $this->belongsTo('App\Utlisateur');
+    }
+    //relation hasMany to reservation
+        public function reservations(){
+            return $this->HasMany('App\Reservation');
+        }
 }

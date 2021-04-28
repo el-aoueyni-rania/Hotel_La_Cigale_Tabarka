@@ -14,15 +14,16 @@ class CreateBienetresTable extends Migration
     public function up()
     {
         Schema::create('bienetres', function (Blueprint $table) {
-            $table->integer('B_id')->primary();
-            $table ->String('Type_de_Bienetres_choisie');
-            $table ->String('Description');
+            $table->increments('id');
+            $table->String('Type_de_Bienetres_choisie');
+            $table->String('Description');
             $table->integer('prix');
+            $table->String('Picture');
             $table->integer('utilisateur_id')->unsigned();
-            $table->integer('client_id')->unsigned();
+            //$table->integer('client_id')->unsigned();
             $table->timestamps();
             $table->foreign('utilisateur_id')->references('id')->on('utlisateurs')->onDelete('restrict')->onUpdate('restrict');
-            $table->foreign('client_id')->references('id')->on('reservations')->onDelete('restrict')->onUpdate('restrict');
+            //$table->foreign('client_id')->references('id')->on('reservations')->onDelete('restrict')->onUpdate('restrict');
         });
     }
 

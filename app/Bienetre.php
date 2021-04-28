@@ -7,8 +7,8 @@ use Illuminate\Database\Eloquent\Relations\HasMany;
 
 class Bienetre extends Model
 {
-    protected $primarykey ="B_id";
-    public $incrementing = false ;
+   // protected $primarykey ="B_id";
+   // public $incrementing = false ;
 
 
     //relation hasMany to Utilasateurs
@@ -20,3 +20,4 @@ class Bienetre extends Model
             return $this->HasMany('App\Reservation');
         }
 }
+

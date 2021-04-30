@@ -23,7 +23,7 @@ class CreateReservationsTable extends Migration
             $table->integer('nbr_enfants');
             $table->integer('utilisateur_id')->unsigned();
             $table->timestamps();
-            $table->foreign('utilisateur_id')->references('id')->on('utlisateurs')->onDelete('restrict')->onUpdate('restrict');
+             $table->foreign('utilisateur_id')->references('id')->on('utlisateurs')->onDelete('restrict')->onUpdate('restrict');
 
         });
     }

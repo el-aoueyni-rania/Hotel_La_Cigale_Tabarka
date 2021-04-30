@@ -11,8 +11,8 @@ class Reservation extends Model
             return $this->belongsTo('App\Bienetre');
         }
 
-        public function utilisateur(){
-            return $this->belongsTo('App\Utilisateur');
+         public function utlisateur(){
+             return $this->belongsTo('App\Utlisateur');
         }
 
 }

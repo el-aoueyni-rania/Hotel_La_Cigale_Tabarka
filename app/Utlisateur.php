@@ -10,4 +10,7 @@ class Utlisateur extends Model
     public function bienetre(){
         return $this->belongsTo('App\Bienetre');
     }
+    public function services(){
+        return $this->hasMany('App\Service');
+    }
 }

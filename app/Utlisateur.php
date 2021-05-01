@@ -14,4 +14,8 @@ class Utlisateur extends Model
     public function reservations(){
         return $this->hasMany('App\Reservation');
     }
+    public function activite()
+     {
+        return $this->belongsTo('App\Activite');
+     }
 }

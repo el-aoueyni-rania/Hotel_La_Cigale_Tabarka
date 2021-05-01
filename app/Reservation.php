@@ -10,9 +10,7 @@ class Reservation extends Model
         public function bienetre(){
             return $this->belongsTo('App\Bienetre');
         }
-
-         public function utlisateur(){
-             return $this->belongsTo('App\Utlisateur');
+        public function utlisateur(){
+            return $this->belongsTo('App\Utlisateur');
         }
-
 }

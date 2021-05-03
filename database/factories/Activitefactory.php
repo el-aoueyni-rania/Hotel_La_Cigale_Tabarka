@@ -10,7 +10,7 @@ $factory->define(Activite::class, function (Faker $faker) {
         'Nom_activités'=> $faker -> word(),
         'Date_activités' => $faker ->date,
         'Temps_activités' => $faker ->dateTime,
-        'utilisateur_id'=>Utlisateur::get('id')->random(),
+        'utlisateur_id'=>Utlisateur::get('id')->random(),
          'created_at' => now(),
     ];
 });

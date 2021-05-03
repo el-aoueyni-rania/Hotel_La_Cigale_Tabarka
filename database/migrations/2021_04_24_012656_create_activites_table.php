@@ -18,9 +18,9 @@ class CreateActivitesTable extends Migration
             $table->string('Nom_activités',100);
             $table->date('Date_activités');
             $table->dateTime('Temps_activités');
-            $table->integer('id_utilisateur')->unsigned();
+            $table->integer('utlisateur_id')->unsigned();
             $table->timestamps();
-            $table->foreign('id_utilisateur')->references('id')->on('utlisateurs')->onDelete('restrict')->onUpdate('restrict');
+            $table->foreign('utlisateur_id')->references('id')->on('utlisateurs')->onDelete('restrict')->onUpdate('restrict');
 
         });
     }

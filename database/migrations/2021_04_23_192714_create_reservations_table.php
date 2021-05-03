@@ -21,10 +21,16 @@ class CreateReservationsTable extends Migration
             $table->integer('nbr_chambres');
             $table->integer('nbr_adultes');
             $table->integer('nbr_enfants');
+<<<<<<< HEAD
             $table->integer('utlisateur_id')->unsigned();
             $table->timestamps();
              $table->foreign('utlisateur_id')->references('id')->on('utlisateurs')->onDelete('restrict')->onUpdate('restrict');
 
+=======
+            $table->integer('utilisateur_id')->unsigned();
+            $table->timestamps();
+            $table->foreign('utilisateur_id')->references('id')->on('utlisateurs')->onDelete('restrict')->onUpdate('restrict');
+>>>>>>> eaff1b5e63c43165a4e9c6e35254697188206d22
         });
     }
 

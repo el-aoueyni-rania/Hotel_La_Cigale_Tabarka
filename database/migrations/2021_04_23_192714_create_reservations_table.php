@@ -25,6 +25,7 @@ class CreateReservationsTable extends Migration
             $table->timestamps();
              $table->foreign('utlisateur_id')->references('id')->on('utlisateurs')->onDelete('restrict')->onUpdate('restrict');
 
+
         });
     }
 

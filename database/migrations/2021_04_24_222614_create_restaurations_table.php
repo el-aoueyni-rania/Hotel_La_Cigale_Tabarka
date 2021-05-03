@@ -22,6 +22,7 @@ class CreateRestaurationsTable extends Migration
             $table->integer('utlisateur_id')->unsigned();
             $table->timestamps();
             $table->foreign('utlisateur_id')->references('id')->on('utlisateurs')->onDelete('restrict')->onUpdate('restrict');
+            $table->timestamps();
         });
     }
 

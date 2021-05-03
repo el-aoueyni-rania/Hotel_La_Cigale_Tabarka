@@ -14,8 +14,6 @@ $factory->define(Bienetre::class, function (Faker $faker) {
         'Picture'=>$faker ->imageUrl(),
         'utilisateur_id'=>Utlisateur::get('id')->random(),
         'client_id'=>Reservation::get('id')->random(),
-        'client_id'=>Reservation::random('id')->random(),
-
         'created_at' => now()
 
     ];

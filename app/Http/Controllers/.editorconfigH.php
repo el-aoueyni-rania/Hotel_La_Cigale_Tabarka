@@ -10,5 +10,5 @@ class .editorconfigH extends Controller
     //
 
 };
-};
+
 

@@ -15,5 +15,4 @@ class Reservation extends Model
             return $this->belongsTo('App\Utlisateur');
         }
 
-
 }

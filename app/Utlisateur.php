@@ -3,6 +3,7 @@
 namespace App;
 
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Relations\BelongsTo;
 
 
 class Utlisateur extends Model {
@@ -13,21 +14,18 @@ class Utlisateur extends Model {
     }
 
 
-    public function reservations() {
-        return $this->hasMany( 'App\Reservation' );
+    public function reservation() {
+        return $this->belongsTo( 'App\Reservation' );
     }
 
-    public function services(){
-        return $this->hasMany('App\Service');
+    public function service(){
+        return $this->belongsTo('App\Service');
     }
-
-
-
 
      // relation one to many between restauration and utilisateur
-     public function restaurations()
+     public function restauration()
     {
-        return $this->hasMany('App\Restauration');
+        return $this->belongsTo('App\Restauration');
     }
 
     public function activite()

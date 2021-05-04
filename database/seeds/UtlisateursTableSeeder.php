@@ -11,6 +11,6 @@ class UtlisateursTableSeeder extends Seeder
      */
     public function run()
     {
-        factory(Utlisateur::class,4)->create();
+        factory(Utlisateur::class,10)->create();
     }
 }

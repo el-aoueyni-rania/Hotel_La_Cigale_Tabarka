@@ -17,8 +17,8 @@ class CreateServicesTable extends Migration
             $table->increments('id');
             $table->string('nom',50);
             $table->string('type',50);
-            $table->timestamps();
             $table->integer('utlisateur_id')->unsigned();
+            $table->timestamps();
             $table->foreign('utlisateur_id')->references('id')->on('utlisateurs')->onDelete('restrict')->onUpdate('restrict');
         });
     }

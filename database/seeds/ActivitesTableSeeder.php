@@ -1,5 +1,5 @@
 <?php
-use App\Utlisateur;
+
 use App\Activite;
 use Illuminate\Database\Seeder;
 

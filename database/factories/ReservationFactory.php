@@ -14,7 +14,7 @@ $factory->define(Reservation::class, function (Faker $faker) {
         'nbr_chambres'  => $faker ->randomDigit,
         'nbr_adultes'  => $faker ->randomDigit,
         'nbr_enfants'  => $faker ->randomDigit,
-        'utilisateur_id'=>Utlisateur::get('id')->random(),
+        'utlisateur_id'=>Utlisateur::get('id')->random(),
          'created_at' => now()
 
     ];

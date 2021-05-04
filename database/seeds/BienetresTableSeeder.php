@@ -12,6 +12,6 @@ class BienetresTableSeeder extends Seeder
     public function run()
     {
         //
-        factory(Bienetre::class,10)->create();
+        factory(Bienetre::class,5)->create();
     }
 }

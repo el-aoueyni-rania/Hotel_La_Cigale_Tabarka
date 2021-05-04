@@ -1,8 +1,8 @@
 <?php
-use App\Bienetre;
+use App\Restauration;
 use Illuminate\Database\Seeder;
 
-class BienetresTableSeeder extends Seeder
+class RestaurationsTableSeeder extends Seeder
 {
     /**
      * Run the database seeds.
@@ -11,7 +11,6 @@ class BienetresTableSeeder extends Seeder
      */
     public function run()
     {
-        //
-        factory(Bienetre::class,5)->create();
+        factory(Restauration::class,7)->create();
     }
 }

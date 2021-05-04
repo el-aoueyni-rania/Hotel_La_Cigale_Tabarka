@@ -9,11 +9,11 @@ use Faker\Generator as Faker;
 $factory->define(Bienetre::class, function (Faker $faker) {
     return [
         'Type_de_Bienetres_choisie' => $faker -> word(),
-        'Description' => $faker -> paragraph(),
+        'Description' => $faker -> paragraph(1),
         'prix' => $faker -> numberBetween($min = 10, $max = 70),
         'Picture'=>$faker ->imageUrl(),
-        'utilisateur_id'=>Utlisateur::get('id')->random(),
-        //'client_id'=>Reservation::random('id')->random(),
+        'utlisateur_id'=>Utlisateur::get('id')->random(),
+        'client_id'=>Reservation::get('id')->random(),
         'created_at' => now()
 
     ];

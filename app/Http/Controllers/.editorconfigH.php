@@ -8,4 +8,7 @@ use Illuminate\Http\Request;
 class .editorconfigH extends Controller
 {
     //
-}
+
+};
+
+

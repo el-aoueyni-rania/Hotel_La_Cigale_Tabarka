@@ -10941,4 +10941,23 @@ a.text-dark:focus {
     border-color: #dee2e6;
   }
 }
+.k
+{
+  width : 50px ;
+  height : 50px;
+  border: solid black;
+  border-radius: 10px;
+  margin: 5px;
+  box-shadow: 5px 5px 5px black;
+}
+.ft{
+  font-style: italic;
+  color: black;
+}
+.transbox {
+  background-color: #ffffff;
+  opacity: 0.8;
+  font-weight: bold;
+  color: #000000;
+}
 

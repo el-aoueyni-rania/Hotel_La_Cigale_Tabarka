@@ -25,12 +25,12 @@
 
                         </ol>
                         <div class="carousel-inner" role="listbox">
-                            <div class="carousel-item active"><img class="d-block img-fluid" src="https://via.placeholder.com/900x350" alt="First slide" /></div>
-                            <div class="carousel-item"><img class="d-block img-fluid" src="https://via.placeholder.com/900x350" alt="Second slide" /></div>
-                            <div class="carousel-item"><img class="d-block img-fluid" src="https://via.placeholder.com/900x350" alt="Third slide" /></div>
-                            <div class="carousel-item"><img class="d-block img-fluid" src="https://via.placeholder.com/900x350" alt="Fourth slide" /></div>
-                            <div class="carousel-item"><img class="d-block img-fluid" src="https://via.placeholder.com/900x350" alt="Fifth slide" /></div>
-                            <div class="carousel-item"><img class="d-block img-fluid" src="https://via.placeholder.com/900x350" alt="Sixth slide" /></div>
+                            <div class="carousel-item active"><img class="d-block img-fluid" src="/images/chm3.png" hight="400" width="800" alt="First slide" /></div>
+                            <div class="carousel-item"><img class="d-block img-fluid" src="/images/ch2.png" height="400" width="800" alt="Second slide" /></div>
+                            <div class="carousel-item"><img class="d-block img-fluid" src="/images/rest3.png" height="400" width="800" alt="Third slide" /></div>
+                            <div class="carousel-item"><img class="d-block img-fluid"src="/images/img3.jpg" height="350" width="900" alt="Fourth slide" /></div>
+                            <div class="carousel-item"><img class="d-block img-fluid" src="/images/img2.jpg" height="350" width="900" alt="Fifth slide" /></div>
+                            <div class="carousel-item"><img class="d-block img-fluid" src="/images/ch3.jpg" height="350" width="900" alt="Sixth slide" /></div>
 
 
 
@@ -47,7 +47,7 @@
                     <div class="row">
                         <div class="col-lg-4 col-md-6 mb-4">
                             <div class="card h-55">
-                                <a href="#!"><img class="card-img-top" src="https://via.placeholder.com/700x400" alt="..." /></a>
+                                <a href="#!"><img class="card-img-top"  height="150" src="/images/109348086_643962209661458_6055582010355001046_n.jpg" alt="..." /></a>
                                 <div class="card-body">
                                     <h4 class="card-title"><a href="#!">Reservations</a></h4>
                                 </div>
@@ -56,7 +56,7 @@
                         </div>
                         <div class="col-lg-4 col-md-6 mb-4">
                             <div class="card h-55">
-                                <a href="#!"><img class="card-img-top" src="https://via.placeholder.com/700x400" alt="..." /></a>
+                                <a href="#!"><img class="card-img-top" height="150" src="/images/181332957_295623345479243_8754722557943562476_n.jpg"  alt="..." /></a>
                                 <div class="card-body">
                                     <h4 class="card-title"><a href="#!">Restauration</a></h4>
                                 </div>
@@ -65,7 +65,7 @@
                         </div>
                         <div class="col-lg-4 col-md-6 mb-4">
                             <div class="card h-55">
-                                <a href="#!"><img class="card-img-top" src="https://via.placeholder.com/700x400" alt="..." /></a>
+                                <a href="#!"><img class="card-img-top"  height="150" src="/images/181846405_1639385406247353_7355347222931292017_n.jpg" alt="..." /></a>
                                 <div class="card-body">
                                     <h4 class="card-title"><a href="#!">Acitivités</a></h4>
                                    
@@ -75,7 +75,7 @@
                         </div>
                         <div class="col-lg-4 col-md-6 mb-4">
                             <div class="card h-55">
-                                <a href="#!"><img class="card-img-top" src="https://via.placeholder.com/700x400" alt="..." /></a>
+                                <a href="#!"><img class="card-img-top"  height="150" src="/images/182229132_1675753329302325_9183201522271453827_n.jpg" alt="..." /></a>
                                 <div class="card-body">
                                     <h4 class="card-title"><a href="#!">Bien Etre</a></h4>
                                     
@@ -85,7 +85,7 @@
                         </div>
                         <div class="col-lg-4 col-md-6 mb-4">
                             <div class="card h-55">
-                                <a href="#!"><img class="card-img-top" src="https://via.placeholder.com/700x400" alt="..." /></a>
+                                <a href="#!"><img class="card-img-top"  height="150" src="/images/117395605_826711041444304_5397342219903027048_n.jpg" alt="..." /></a>
                                 <div class="card-body">
                                     <h4 class="card-title"><a href="#!">Services</a></h4>
                                 
@@ -95,7 +95,7 @@
                         </div>
                         <div class="col-lg-4 col-md-6 mb-4">
                             <div class="card h-55">
-                                <a href="#!"><img class="card-img-top" src="https://via.placeholder.com/700x400" alt="..." /></a>
+                                <a href="#!"><img class="card-img-top"  height="150" src="/images/73312148_531245677435067_4898590989146390528_n.png" alt="..." /></a>
                                 <div class="card-body">
                                     <h4 class="card-title"><a href="#!">Utilisateurs</a></h4>
                                    

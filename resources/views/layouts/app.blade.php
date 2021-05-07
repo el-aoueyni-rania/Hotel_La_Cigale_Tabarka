@@ -21,14 +21,15 @@
 </head>
 <body>
     <div id="app">
-        <nav class="navbar navbar-light navbar-expand-lg transbox">
+  <!------------------------------- Navigation------------------------------>
+        <nav class="navbar navbar-light bg-dark navbar-expand-lg transbox">
             <div class="container">
                  <!--<a class="navbar-brand" href="{{ url('/') }}">
                     {{ config('app.name', ' Laravel') }}
                 </a>-->
                 <img  class="k"  src="/images/logo4.jpg"/>
                     <h4  style="padding-left : 5px" class="ft" > 
-                    <a class="navbar-brand" href="{{ url('/') }}">
+                    <a class="navbar-brand text-white" href="{{ url('/') }}">
                    La Cigale Tabarka
                     </a>
                     </h4>
@@ -46,11 +47,11 @@
                         <!-- Authentication Links -->
                         @guest
                             <li class="nav-item">
-                                <a class="nav-link active" href="{{ route('login') }}">{{ __('Login') }}</a>
+                                <a class="nav-link active text-white" href="{{ route('login') }}">{{ __('Login') }}</a>
                             </li>
                             @if (Route::has('register'))
-                                <li class="nav-item">
-                                    <a class="nav-link active" href="{{ route('register') }}">{{ __('Register') }}</a>
+                                <li class="nav-item " >
+                                    <a class="nav-link active text-white" href="{{ route('register') }}">{{ __('Register') }}</a>
                                 </li>
                             @endif
                         @else
@@ -76,10 +77,14 @@
                 </div>
             </div>
         </nav>
-
-        <main class="py-4">
+     <!------------------------------- Page Content------------------------->
+        <main class="container py-4">
             @yield('content')
         </main>
+         <!-------------------------------- Footer------------------------->
+         <footer class="py-5 bg-dark">
+            <div class="container"><p class="m-0 text-center text-white">Copyright &copy; Your Website 2021</p></div>
+        </footer>
     </div>
 </body>
 </html>

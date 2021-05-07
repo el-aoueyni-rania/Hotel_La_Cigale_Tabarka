@@ -21,7 +21,7 @@
 </head>
 <body>
     <div id="app">
-  <!------------------------------- Navigation------------------------------>
+  <!--Navigation-->
         <nav class="navbar navbar-light bg-dark navbar-expand-lg transbox">
             <div class="container">
                  <!--<a class="navbar-brand" href="{{ url('/') }}">
@@ -77,11 +77,11 @@
                 </div>
             </div>
         </nav>
-     <!------------------------------- Page Content------------------------->
+     <!-- Page Content-->
         <main class="container py-4">
             @yield('content')
         </main>
-         <!-------------------------------- Footer------------------------->
+         <!-- Footer-->
          <footer class="py-5 bg-dark">
             <div class="container"><p class="m-0 text-center text-white">Copyright &copy; Your Website 2021</p></div>
         </footer>

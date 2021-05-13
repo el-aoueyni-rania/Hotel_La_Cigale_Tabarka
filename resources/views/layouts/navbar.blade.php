@@ -1,5 +1,8 @@
 
-     <nav class="navbar navbar-light bg-light sticky-top navbar-expand-lg transbox bg-dark flex-md-nowrap p-0 shadow">
+
+    {{-- <nav class="navbar navbar-light bg-light sticky-top navbar-expand-lg transbox flex-md-nowrap p-0 shadow"> --}}
+        <nav class="navbar navbar-light bg-dark navbar-expand-lg sticky-top transbox flex-md-nowrap p-0 shadow">
+
             <div class="container">
                  <!--<a class="navbar-brand" href="{{ url('/') }}">
                     {{ config('app.name', ' Laravel') }}

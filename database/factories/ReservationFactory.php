@@ -3,7 +3,7 @@
 /** @var \Illuminate\Database\Eloquent\Factory $factory */
 
 use App\Reservation;
-use App\Utlisateur;
+use App\User;
 use Faker\Generator as Faker;
 
 $factory->define(Reservation::class, function (Faker $faker) {
@@ -14,7 +14,7 @@ $factory->define(Reservation::class, function (Faker $faker) {
         'nbr_chambres'  => $faker ->randomDigit,
         'nbr_adultes'  => $faker ->randomDigit,
         'nbr_enfants'  => $faker ->randomDigit,
-        'utlisateur_id'=>Utlisateur::get('id')->random(),
+        'user_id'=>User::get('id')->random(),
          'created_at' => now()
 
     ];

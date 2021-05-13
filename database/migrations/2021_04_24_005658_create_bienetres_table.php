@@ -19,10 +19,10 @@ class CreateBienetresTable extends Migration
             $table->String('Description');
             $table->integer('prix');
             $table->String('Picture');
-            $table->integer('utlisateur_id')->unsigned();
+            $table->integer('user_id')->unsigned();
             $table->integer('client_id')->unsigned();
             $table->timestamps();
-            $table->foreign('utlisateur_id')->references('id')->on('utlisateurs')->onDelete('restrict')->onUpdate('restrict');
+            $table->foreign('user_id')->references('id')->on('users')->onDelete('restrict')->onUpdate('restrict');
             $table->foreign('client_id')->references('id')->on('reservations')->onDelete('restrict')->onUpdate('restrict');
         });
     }

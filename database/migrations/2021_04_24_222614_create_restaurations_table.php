@@ -19,9 +19,9 @@ class CreateRestaurationsTable extends Migration
             $table->string('menu');
             $table->string('fruits');
             $table->string('boissons');
-            $table->integer('utlisateur_id')->unsigned();
+            $table->integer('user_id')->unsigned();
             $table->timestamps();
-            $table->foreign('utlisateur_id')->references('id')->on('utlisateurs')->onDelete('restrict')->onUpdate('restrict');
+            $table->foreign('user_id')->references('id')->on('users')->onDelete('restrict')->onUpdate('restrict');
         });
     }
 

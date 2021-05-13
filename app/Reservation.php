@@ -12,8 +12,8 @@ class Reservation extends Model
             return $this->belongsTo('App\Bienetre');
         }
 
-        public function utlisateur(){
-            return $this->hasMany('App\Utlisateur');
+        public function user(){
+            return $this->hasMany('App\User');
         }
 
 }

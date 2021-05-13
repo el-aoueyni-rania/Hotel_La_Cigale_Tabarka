@@ -9,8 +9,8 @@ class Restauration extends Model
 {
 
     //Relation Belongs to utilisateur table
-    public function utlisateur(){
-        return $this->hasMany('App\Utlisateur');
+    public function user(){
+        return $this->hasMany('App\User');
     }
 
 }

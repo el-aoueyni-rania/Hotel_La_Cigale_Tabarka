@@ -12,8 +12,8 @@ class Bienetre extends Model
 
 
     //relation hasMany to Utilasateurs
-    public function Utilisateur(){
-        return $this->belongsTo('App\Utlisateur');
+    public function user(){
+        return $this->belongsTo('App\User');
     }
     //relation hasMany to reservation
         public function reservations(){

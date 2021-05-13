@@ -1,5 +1,8 @@
 @extends('layouts.app')
+
 @section('content')
+    
+
 
 <div class="row">
                 <div class="col-lg-3">
@@ -106,6 +109,11 @@
                     </div>
                 </div>
             </div>
+
+<div class="title m-b-md">
+                    hotel la ciagale tabarka 
+</div>
+
 @endsection
 
 

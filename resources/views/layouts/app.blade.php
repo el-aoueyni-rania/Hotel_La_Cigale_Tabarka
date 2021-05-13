@@ -22,9 +22,9 @@
 <body>
 
     @include('layouts.navbar')
+    
         <main class="py-4">
 
-    
             @yield('content')
         </main>
         <!-- Footer-->

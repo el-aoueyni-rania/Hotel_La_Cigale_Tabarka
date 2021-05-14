@@ -4,8 +4,6 @@ namespace App\Http\Controllers;
 
 
 use App\bienetre;
-
-
 use Illuminate\Http\Request;
 use Illuminate\Auth;
 use SebastianBergmann\CodeCoverage\Report\Html\Dashboard;
@@ -19,11 +17,6 @@ class HomeController extends Controller
      */
     public function __construct()
     {
-
-
-        $this->middleware('auth')->except('welcome');
-
-        //$this->middleware('auth')->except('welcome');
 
 
         $this->middleware('auth')->except('welcome');

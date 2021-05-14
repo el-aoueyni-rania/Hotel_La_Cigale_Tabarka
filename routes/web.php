@@ -19,15 +19,12 @@ Route::get('/home', 'HomeController@index')->name('home');
 
 
 Route::get('/admin', function(){
-
-Route::get('/admin.dashboard', function(){
-
 return view('admin.dashboard');
-Route::get('/admin.dashboard', function(){
-    return view('admin.dashboard');
 });
 
-/*
+
+
+
 
 
 
@@ -36,30 +33,3 @@ Route::get('/bienetre', 'HomeController@bienetre')->name('bienetre');
 
 
 
-/*
-Route::get('/home', 'HomeController@index')->name('home');
-
-Auth::routes();
-
-Route::get('/home', 'HomeController@index')->name('home');
-
-Auth::routes();
-
-Route::get('/home', 'HomeController@index')->name('home');
-
-Auth::routes();
-
-Route::get('/home', 'HomeController@index')->name('home');
-
-Auth::routes();
-
-Route::get('/home', 'HomeController@index')->name('home');
-
-Auth::routes();
-
-Route::get('/home', 'HomeController@index')->name('home');
-
-Auth::routes();
-
-Route::get('/home', 'HomeController@index')->name('home');
-*/

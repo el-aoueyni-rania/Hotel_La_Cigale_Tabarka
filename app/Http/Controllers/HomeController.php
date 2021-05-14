@@ -41,7 +41,7 @@ class HomeController extends Controller
 public function redirectTo(){
 
     if(auth::user()->admin){
-        return '/admin-Dashboard';
+        return '/admin-dashboard';
     }
 return '/home';
 }

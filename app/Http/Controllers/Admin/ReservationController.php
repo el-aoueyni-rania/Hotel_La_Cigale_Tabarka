@@ -47,7 +47,7 @@ class ReservationController extends Controller
      */
     public function show(Reservation $reservation)
     {
-        //
+        return view('admin.reservation.show',['reservation'=>$reservation]);
     }
 
     /**

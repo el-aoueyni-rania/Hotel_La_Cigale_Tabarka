@@ -21,7 +21,7 @@
       <td>{{$reservation->Client_name}}</td>
       <td>{{$reservation->date_arrivee}}</td>
       <td>
-      <a href="#" class="btn btn-info">show</a>
+      <a href="{{route('reservations.show',['reservation' => $reservation->id])}}" class="btn btn-info">show</a>
       <a href="#" class="btn btn-warning">Edit</a>
       <a href="#" class="btn btn-danger">Delete</a>
 

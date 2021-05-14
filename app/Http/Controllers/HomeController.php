@@ -7,6 +7,8 @@ use App\bienetre;
 
 
 use Illuminate\Http\Request;
+use Illuminate\Auth;
+use SebastianBergmann\CodeCoverage\Report\Html\Dashboard;
 
 class HomeController extends Controller
 {
@@ -18,9 +20,13 @@ class HomeController extends Controller
     public function __construct()
     {
 
-        $this->middleware('auth')->except('welcome'); 
+
+        $this->middleware('auth')->except('welcome');
 
         //$this->middleware('auth')->except('welcome');
+
+
+        $this->middleware('auth')->except('welcome');
 
     }
 
@@ -36,9 +42,16 @@ class HomeController extends Controller
 
     public function welcome()
     {
-      
+
         return view('welcome');
     }
+public function redirectTo(){
+
+    if(auth::user()->admin){
+        return '/admin-Dashboard';
+    }
+return '/home';
+}
 
     public function bienetre()
     {

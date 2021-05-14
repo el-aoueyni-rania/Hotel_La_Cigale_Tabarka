@@ -45,8 +45,8 @@ class User extends Authenticatable
     }
 
 
-    public function reservation() {
-        return $this->belongsTo( 'App\Reservation' );
+    public function reservations() {
+        return $this->hasMany( 'App\Reservation' );
     }
 
     public function service(){

@@ -110,9 +110,7 @@
                 </div>
             </div>
 
-<div class="title m-b-md">
-                    hotel la ciagale tabarka 
-</div>
+
 
 @endsection
 

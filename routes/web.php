@@ -21,6 +21,8 @@ Route::get('/admin-dashboard', function(){
 return view('admin.dashboard');
 })->middleware('auth','admin');
 
+Route::resource('reservations','Admin\ReservationController');
+
 
 Route::get('/bienetre', 'HomeController@bienetre')->name('bienetre');
 

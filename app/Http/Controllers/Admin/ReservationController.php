@@ -38,14 +38,8 @@ class ReservationController extends Controller
     {
         //  dd('$request');
         
-       $validatedData = $request->validate([
-              'Client_name' => 'required',
-              'date_arrivee' => 'required',
-              'nbr_nuits' => 'required',
-              'nbr_chambres' => 'required',
-              'nbr_adultes' => 'required',
-              'nbr_enfants' => 'required',
-  ]);
+       $validatedData = $request->validate($this->validationRules());
+              
 
 //   $reservation= new Reservation;
 //   $reservation->Client_name=$request->Client_name;
@@ -93,14 +87,8 @@ class ReservationController extends Controller
     public function update(Request $request, Reservation $reservation)
     {
           
-       $validatedData = $request->validate([
-        'Client_name' => 'required',
-        'date_arrivee' => 'required',
-        'nbr_nuits' => 'required',
-        'nbr_chambres' => 'required',
-        'nbr_adultes' => 'required',
-        'nbr_enfants' => 'required',
-]);
+        $validatedData = $request->validate($this->validationRules());
+
 $reservation->update($validatedData);
 return redirect()->route('reservations.show',$reservation);
 
@@ -117,4 +105,17 @@ return redirect()->route('reservations.show',$reservation);
     {
         //
     }
+
+    private function validationRules(){
+        return [
+            'Client_name' => 'required',
+            'date_arrivee' => 'required',
+            'nbr_nuits' => 'required',
+            'nbr_chambres' => 'required',
+            'nbr_adultes' => 'required',
+            'nbr_enfants' => 'required',
+        ];
+
+    }
 }
+

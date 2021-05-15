@@ -1,6 +1,7 @@
 @extends('layouts.admin');
 
 @section('main')
+<a href="{{route('reservations.create')}}" class="btn btn-outline-primary  float-right">Ajouter nouvelle Réservation<a>
 <h3>Liste des Reservations :</h3>
 <table class="table">
   <thead>

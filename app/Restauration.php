@@ -10,7 +10,7 @@ class Restauration extends Model
 
     //Relation Belongs to utilisateur table
     public function user(){
-        return $this->hasMany('App\User');
+        return $this->belongsTo('App\User');
     }
 
 }

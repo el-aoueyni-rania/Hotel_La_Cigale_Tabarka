@@ -32,7 +32,7 @@ public function redirectTo(){
     if (Auth::user()->admin){
         return'/admin-dashboard';
     }
-    return'/home';
+     '/home';
 }
     /**
      * Create a new controller instance.

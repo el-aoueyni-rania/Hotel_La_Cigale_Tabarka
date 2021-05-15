@@ -20,16 +20,17 @@ Route::get('/home', 'HomeController@index')->name('home');
 
 Route::get('/admin-dashboard', function(){
 return view('admin.dashboard');
-});
+})->middleware('auth' , 'admin' );
 
 
 
 
 
+Route::resource('restaurations', 'Admin\RestaurationController');
 
 
 
-Route::get('/bienetre', 'HomeController@bienetre')->name('bienetre');
+//Route::get('/bienetre', 'HomeController@bienetre')->name('bienetre');
 
 
 

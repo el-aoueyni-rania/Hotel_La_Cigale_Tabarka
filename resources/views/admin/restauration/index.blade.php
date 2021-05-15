@@ -1,6 +1,6 @@
 @extends('layouts.admin')
 @section('main')
-    <h1> Restauration List</h1>
+    <h1> <i class="fas fa-utensils"></i> Restauration List</h1>
     <table class="table table-hover">
         <thead>
           <tr>

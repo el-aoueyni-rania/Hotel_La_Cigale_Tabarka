@@ -9,16 +9,16 @@
  </bytton>
 </div>
 @endif 
-<a href="{{route('reservations.create')}}" class="btn btn-outline-primary  float-right">Ajouter nouvelle Réservation<a>
-<h3>Liste des Reservations :</h3>
+<a href="{{route('reservations.create')}}" class="btn btn-outline-primary  float-right"> <i class="fas fa-plus-square"></i> Ajouter nouvelle Réservation<a>
+<h3> <i class="fas fa-hotel"></i> Liste des Reservations :</h3>
 <table class="table">
   <thead>
     <tr>
-      <th scope="col">Id_Reservation</th>
-      <th scope="col">Id_Client</th>
-      <th scope="col">Nom_Client</th>
-      <th scope="col">Date_Arrivée</th>
-      <th scope="col">Opérations</th>
+      <th scope="col"><i class="fab fa-slack-hash"></i>Id_Reservation</th>
+      <th scope="col"><i class="fab fa-slack-hash"></i>Id_Client</th>
+      <th scope="col"><i class="fas fa-user"></i>Nom_Client</th>
+      <th scope="col"><i class="fas fa-calendar-day"></i>Date_Arrivée</th>
+      <th scope="col"><i class="fas fa-cogs">Opérations</th>
 
     </tr>
   </thead>
@@ -30,10 +30,10 @@
       <td>{{$reservation->Client_name}}</td>
       <td>{{$reservation->date_arrivee}}</td>
       <td>
-      <a href="{{route('reservations.show',['reservation' => $reservation->id])}}" class="btn btn-info">show</a>
-      <a href="{{route('reservations.edit',['reservation' => $reservation->id])}}" class="btn btn-warning">Edit</a>
+      <a href="{{route('reservations.show',['reservation' => $reservation->id])}}" class="btn btn-info"><i class="fas fa-info-circle"></i></a>
+      <a href="{{route('reservations.edit',['reservation' => $reservation->id])}}" class="btn btn-warning"><i class="fas fa-edit"></i></a>
     <a href="#" class="btn btn-danger" onclick="event.preventDefault();
-        document.querySelector('#delete-reservation-form').submit()">Delete</a>
+        document.querySelector('#delete-reservation-form').submit()"><i class="fas fa-trash-alt"></i></a>
     <form action="{{route('reservations.destroy',['reservation' => $reservation->id])}}" method="post" id="delete-reservation-form"> @csrf @method('DELETE')</form>
       </td>
     </tr>

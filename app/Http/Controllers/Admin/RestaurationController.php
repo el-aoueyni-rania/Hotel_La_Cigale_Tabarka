@@ -36,7 +36,27 @@ class RestaurationController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        //dd($request);
+        $validatedData = $request->validate([
+            'nom_restaurant' =>'required|min:2',
+            'menu' =>'required|min:4',
+            'fruits' =>'required|min:3',
+            'boissons' =>'required|min:3',
+            'user_id' =>'required',
+        ]);
+        // first method
+        /**
+         *   $restauration = new Restauration ; 
+         *   $restauration->nom_restaurant = $request->nom_restaurant;
+         *   $restauration->menu = $request->menu;
+         *   $restauration->fruits = $request->fruits;
+         *   $restauration->boissons = $request->boissons;
+         *   $restauration->user_id = $request->user_id;
+         *   $restauration->save();
+         */
+      // 2nd method
+      $restauration = Restauration::create($validatedData);
+      return redirect()->route('restaurations.show' , $restauration);
     }
 
     /**

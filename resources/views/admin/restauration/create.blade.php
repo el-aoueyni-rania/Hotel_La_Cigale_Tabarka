@@ -4,27 +4,32 @@
         <legend>
             <i class="fas fa-plus"></i> Add new restauration 
         </legend>
-        <form action="{{route('restaurations.store')}}" method="post">
+        <form action="{{ route('restaurations.store') }}" method="post">
         @csrf
         <div class="form-group">
-            <label for="nomresto"> Nom du restaurant : </label>
-            <input type="text" name="nomresto" id="nomresto" class="form-control" placeholder="Nom du restaurant">
+            <label for="nom_restaurant"> Nom du restaurant : </label>
+            <input type="text" name="nom_restaurant" value="{{ old('nom_restaurant') }}" id="nom_restaurant" class="form-control @error('nom_restaurant') is-invalid @enderror @error('nom_restaurant') is-invalid @enderror" placeholder="Nom du restaurant">
+            @error('nom_restaurant')<div class="text-danger">{{ $message }}</div>@enderror
         </div>
         <div class="form-group">
             <label for="menu"> Menu : </label>
-            <input type="text" name="menu" id="menu" class="form-control" placeholder="menu">
+            <input type="text" name="menu" value="{{ old('menu') }}" id="menu" class="form-control @error('menu') is-invalid @enderror" placeholder="Menu">
+            @error('menu')<div class="text-danger">{{ $message }}</div>@enderror
         </div>
         <div class="form-group">
             <label for="fruits"> Fruits : </label>
-            <input type="text" name="fruits" id="fruits" class="form-control" placeholder="fruits">
+            <input type="text" name="fruits" value="{{ old('fruits') }}" id="fruits" class="form-control @error('fruits') is-invalid @enderror" placeholder="Fruits">
+            @error('fruits')<div class="text-danger">{{ $message }}</div>@enderror
         </div>
         <div class="form-group">
             <label for="boissons"> Boissons : </label>
-            <input type="text" name="boissons" id="boissons" class="form-control" placeholder="boissons">
+            <input type="text" name="boissons" value="{{ old('boissons') }}" id="boissons" class="form-control @error('boissons') is-invalid @enderror" placeholder="Boissons">
+            @error('boissons')<div class="text-danger">{{ $message }}</div>@enderror
         </div>
         <div class="form-group">
             <label for="user_id"> User_id : </label>
-            <input type="text" name="user_id" id="user_id" class="form-control" placeholder="user_id">
+            <input type="text" name="user_id" value="{{ old('user_id') }}" id="user_id" class="form-control @error('user_id') is-invalid @enderror" placeholder="User_id">
+            @error('user_id')<div class="text-danger">{{ $message }}</div>@enderror
         </div>
         <div class="row">
             <div class="col">

@@ -1,16 +1,15 @@
 @extends('layouts.admin')
 @section('main')
-    <h3> Restauration List</h3>
+<a href="{{ route('restaurations.create' ) }}" class="btn btn-outline-primary float-right"> <i class="fas fa-plus"></i> Add new restauration</a>
+    <h2> <i class="fas fa-utensils"></i> Restauration List</h2>
     <table class="table table-hover">
         <thead>
           <tr>
             <th scope="col">#</th>
-            <th scope="col">Nom du restaurant</th>
-            <th scope="col">Menu</th>
-            <th scope="col">Fruits</th>
-            <th scope="col">Boissons</th>
-            <th scope="col">Id de l'utilisateur</th>
-            <th scope="col">Operations</th>
+            <th scope="col"><i class="fas fa-utensils"></i> Nom du restaurant</th>
+            <th scope="col"><i class="fas fa-list-ul"></i> Menu</th>
+            <th scope="col"><i class="fas fa-user"></i> Id de l'utilisateur</th>
+            <th scope="col"><i class="fas fa-cogs"></i> Operations</th>
           </tr>
         </thead>
         <tbody>
@@ -19,13 +18,11 @@
                 <th scope="row">{{ $key }}</th>
                 <td>{{ $restauration -> nom_restaurant }} </td>
                 <td>{{ $restauration -> menu}} </td>
-                <td>{{ $restauration -> fruits}} </td>
-                <td>{{ $restauration -> boissons}} </td>
                 <td>{{ $restauration -> user_id}} </td>
                 <td>
-                    <a href="#" class="btn btn-info">Show</a>
-                    <a href="#" class="btn btn-warning">Edit</a>
-                    <a href="#" class="btn btn-danger">Delete</a>
+                    <a href="{{ route('restaurations.show' , ['restauration' =>$restauration ->id]) }}" class="btn btn-info"><i class="fas fa-clipboard-list"></i></a>
+                    <a href="#" class="btn btn-warning"><i class="fas fa-edit"></i></a>
+                    <a href="#" class="btn btn-danger"><i class="fas fa-trash-alt"></i></a>
                 </td>
               </tr>
             @endforeach

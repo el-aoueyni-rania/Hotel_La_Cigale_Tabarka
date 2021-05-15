@@ -25,7 +25,7 @@ class RestaurationController extends Controller
      */
     public function create()
     {
-        //
+        return view('admin.restauration.create');
     }
 
     /**

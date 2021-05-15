@@ -1,5 +1,6 @@
 @extends('layouts.admin')
 @section('main')
+<a href="{{ route('restaurations.create' ) }}" class="btn btn-outline-primary float-right"> <i class="fas fa-plus"></i> Add new restauration</a>
     <h2> <i class="fas fa-utensils"></i> Restauration List</h2>
     <table class="table table-hover">
         <thead>

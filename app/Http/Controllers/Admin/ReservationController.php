@@ -36,7 +36,29 @@ class ReservationController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        //  dd('$request');
+        
+       $validatedData = $request->validate([
+              'Client_name' => 'required',
+              'date_arrivee' => 'required',
+              'nbr_nuits' => 'required',
+              'nbr_chambres' => 'required',
+              'nbr_adultes' => 'required',
+              'nbr_enfants' => 'required',
+  ]);
+
+//   $reservation= new Reservation;
+//   $reservation->Client_name=$request->Client_name;
+//   $reservation->date_arrivee=$request->date_arrivee;
+//   $reservation->nbr_nuits=$request->nbr_nuits;
+//   $reservation->nbr_chambres=$request->nbr_chambres;
+//   $reservation->nbr_adultes=$request->nbr_adultes;
+//   $reservation->nbr_enfants=$request->nbr_enfants;
+//   $reservation->save();
+
+
+         $reservation = Reservation::create($validatedData);
+         return redirect()->route('reservations.show',$reservation);
     }
 
     /**

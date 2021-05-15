@@ -1,4 +1,4 @@
-@extends('layouts.admin');
+@extends('layouts.admin')
 
 @section('main')
 <h3>     Détails du réservation numéro <strong>{{$reservation->id}} :</strong></h3>

@@ -24,8 +24,9 @@
       <td>
       <a href="{{route('reservations.show',['reservation' => $reservation->id])}}" class="btn btn-info">show</a>
       <a href="{{route('reservations.edit',['reservation' => $reservation->id])}}" class="btn btn-warning">Edit</a>
-      <a href="#" class="btn btn-danger">Delete</a>
-
+    <a href="#" class="btn btn-danger" onclick="event.preventDefault();
+        document.querySelector('#delete-reservation-form').submit()">Delete</a>
+    <form action="{{route('reservations.destroy',['reservation' => $reservation->id])}}" method="post" id="delete-reservation-form"> @csrf @method('DELETE')</form>
       </td>
     </tr>
   @endforeach

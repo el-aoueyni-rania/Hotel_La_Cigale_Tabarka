@@ -103,7 +103,8 @@ return redirect()->route('reservations.show',$reservation);
      */
     public function destroy(Reservation $reservation)
     {
-        //
+        $reservation->delete();
+        return redirect()->route('reservations.index');
     }
 
     private function validationRules(){

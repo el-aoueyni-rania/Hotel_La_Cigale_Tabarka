@@ -11,5 +11,7 @@
     <p class="card-text">Nombre d'adultes: <strong>{{$reservation->nbr_adultes}}</strong></p>
     <p class="card-text">Nombre d'enfants: <strong>{{$reservation->nbr_enfants}}</strong></p>
   </div>
+  <a href="{{route('reservations.edit',['reservation' => $reservation->id])}}" class="btn btn-warning">Edit</a>
+
 </div>
 @endsection

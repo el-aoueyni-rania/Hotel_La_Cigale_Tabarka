@@ -15,7 +15,7 @@ class ReservationController extends Controller
      */
     public function index()
     {
-        return view('admin.reservation.index',['reservations'=> Reservation::paginate(6)]);
+        return view('admin.reservation.index',['reservations'=> Reservation::paginate(5)]);
     }
 
     /**
@@ -80,7 +80,7 @@ class ReservationController extends Controller
      */
     public function edit(Reservation $reservation)
     {
-        //
+        return view('admin.reservation.edit',['reservation' => $reservation]);
     }
 
     /**
@@ -92,7 +92,19 @@ class ReservationController extends Controller
      */
     public function update(Request $request, Reservation $reservation)
     {
-        //
+          
+       $validatedData = $request->validate([
+        'Client_name' => 'required',
+        'date_arrivee' => 'required',
+        'nbr_nuits' => 'required',
+        'nbr_chambres' => 'required',
+        'nbr_adultes' => 'required',
+        'nbr_enfants' => 'required',
+]);
+$reservation->update($validatedData);
+return redirect()->route('reservations.show',$reservation);
+
+
     }
 
     /**

@@ -1,6 +1,6 @@
 @extends('layouts.admin')
 @section('main')
-    <h3> Restauration List</h3>
+    <h1> Restauration List</h1>
     <table class="table table-hover">
         <thead>
           <tr>
@@ -23,9 +23,9 @@
                 <td>{{ $restauration -> boissons}} </td>
                 <td>{{ $restauration -> user_id}} </td>
                 <td>
-                    <a href="#" class="btn btn-info">Show</a>
-                    <a href="#" class="btn btn-warning">Edit</a>
-                    <a href="#" class="btn btn-danger">Delete</a>
+                    <a href="#" class="btn btn-info"><i class="fas fa-user-tag"></i></a>
+                    <a href="#" class="btn btn-warning"><i class="fas fa-user-edit"></i></a>
+                    <a href="#" class="btn btn-danger"><i class="fas fa-user-alt-slash"></i></a>
                 </td>
               </tr>
             @endforeach

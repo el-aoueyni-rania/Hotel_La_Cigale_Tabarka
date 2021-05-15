@@ -20,10 +20,10 @@ class RedirectIfAuthenticated
     {
         if (Auth::guard($guard)->check()) {
            // return redirect(RouteServiceProvider::HOME);
-           if(auth::user()->admin){
-            return '/admin-Dashboard';
+           if (Auth::user()->admin){
+            return'/admin';
         }
-            return '/home';
+        return'/welcome';
         }
 
         return $next($request);

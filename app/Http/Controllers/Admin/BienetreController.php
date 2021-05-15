@@ -47,7 +47,7 @@ class BienetreController extends Controller
      */
     public function show(Bienetre $bienetre)
     {
-        //
+        return view('admin.bienetre.show');
     }
 
     /**

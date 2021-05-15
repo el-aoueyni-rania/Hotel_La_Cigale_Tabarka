@@ -20,9 +20,9 @@
             <td>{{ $bienetre->Description}}</td>
             <td>{{ $bienetre->prix}}</td>
             <td>
-                <a href="#" class="btn btn-info">show</a>
-                <a href="#" class="btn btn-warning">Edit</a>
-                <a href="#" class="btn btn-danger">Delete</a>
+                <a href="{{ route('bienetres.show', [Bienetre => $bienetre->id]) }}" class="btn btn-info" title="Show details about {{ $bienetre->id.' '.$bienetre->Type_de_Bienetres_choisie  }}"><i class="fas fa-user-tag"></i>>show</a>
+                <a href="#" class="btn btn-warning" title="Edit user {{ $bienetre->Type_de_Bienetres_choisie }}"><i class="fas fa-user-edit"></i>>Edit</a>
+                <a href="#" class="btn btn-danger" title="Delete user {{ $bienetre->id.' '.$bienetre->Type_de_Bienetres_choisie  }}"><i class="fas fa-user-slash"></i>>Delete</a>
             </td>
         </tr>
         @endforeach

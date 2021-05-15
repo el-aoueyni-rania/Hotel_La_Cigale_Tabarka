@@ -1,6 +1,7 @@
 
 
     {{-- <nav class="navbar navbar-light bg-light sticky-top navbar-expand-lg transbox flex-md-nowrap p-0 shadow"> --}}
+    <div class="fixed-top">
         <nav class="navbar navbar-light bg-dark navbar-expand-lg sticky-top transbox flex-md-nowrap p-0 shadow">
 
             <div class="container">
@@ -8,7 +9,7 @@
                     {{ config('app.name', ' Laravel') }}
                 </a>-->
                 <img  class="k"  src="/images/logo4.jpg"/>
-                    <h4  style="padding-left : 5px" class="ft" > 
+                    <h4  style="padding-left : 5px" class="ft" >
                     <a class="navbar-brand text-white" href="{{ url('/') }}">
                    La Cigale Tabarka
                     </a>
@@ -57,3 +58,4 @@
                 </div>
             </div>
         </nav>
+    </div>

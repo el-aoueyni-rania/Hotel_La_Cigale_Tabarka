@@ -1,6 +1,8 @@
 @extends('layouts.admin')
 @section('main')
-<h3>Bienetre List</h3>
+<br><br><br>
+<a href="{{ route('bienetres.create') }}" class="btn btn-outline-primary float-right"><i class="fas fa-user-plus"></i> Add new Bienetre</a>
+<h3><strong>Bienetre List</strong></h3>
 <table class="table table-hover">
     <thead>
       <tr>
@@ -20,9 +22,9 @@
             <td>{{ $bienetre->Description}}</td>
             <td>{{ $bienetre->prix}}</td>
             <td>
-                <a href="{{ route('bienetres.show', [Bienetre => $bienetre->id]) }}" class="btn btn-info" title="Show details about {{ $bienetre->id.' '.$bienetre->Type_de_Bienetres_choisie  }}"><i class="fas fa-user-tag"></i>>show</a>
-                <a href="#" class="btn btn-warning" title="Edit user {{ $bienetre->Type_de_Bienetres_choisie }}"><i class="fas fa-user-edit"></i>>Edit</a>
-                <a href="#" class="btn btn-danger" title="Delete user {{ $bienetre->id.' '.$bienetre->Type_de_Bienetres_choisie  }}"><i class="fas fa-user-slash"></i>>Delete</a>
+                <a href="{{ route('bienetres.show', ['bienetre' => $bienetre->id]) }}" class="btn btn-info" title="Show details about {{ $bienetre->id.' '.$bienetre->Type_de_bienetres_choisie  }}"><i class="fas fa-user-tag"></i></a>
+                <a href="#" class="btn btn-warning" title="Edit user {{ $bienetre->Type_de_bienetres_choisie }}"><i class="fas fa-user-edit"></i></a>
+                <a href="#" class="btn btn-danger" title="Delete user {{ $bienetre->id.' '.$bienetre->Type_de_bienetres_choisie  }}"><i class="fas fa-user-slash"></i></a>
             </td>
         </tr>
         @endforeach

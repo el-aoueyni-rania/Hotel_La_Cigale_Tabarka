@@ -6,6 +6,8 @@ use App\Bienetre;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 
+use function PHPUnit\Framework\returnValue;
+
 class BienetreController extends Controller
 {
     /**
@@ -25,18 +27,24 @@ class BienetreController extends Controller
      */
     public function create()
     {
-        //
+        return view('admin.bienetre.bcreate ');
     }
 
     /**
      * Store a newly created resource in storage.
-     *
+      *@param  \App\Bienetre  $bienetre
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
     public function store(Request $request)
     {
-        //
+       $validateData = $request->validate([
+           'Type_de_Bienetres_choisie' => 'required|min:2',
+           'prix' => 'required|min:2',
+           'Description' => 'required'
+           ]);
+        $bienetre=Bienetre::create($validateData);
+        return redirect()->route('bienetre.bcreate', $bienetre);
     }
 
     /**
@@ -45,9 +53,10 @@ class BienetreController extends Controller
      * @param  \App\Bienetre  $bienetre
      * @return \Illuminate\Http\Response
      */
-    public function show(Bienetre $bienetre)
+    public function show($id)
     {
-        return view('admin.bienetre.show');
+        $bienetre =Bienetre::find($id);
+        return view('admin.bienetre.bdetail',  ['bienetre' =>$bienetre]);
     }
 
     /**

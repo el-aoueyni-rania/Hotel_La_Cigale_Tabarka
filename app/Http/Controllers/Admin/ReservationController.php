@@ -25,7 +25,7 @@ class ReservationController extends Controller
      */
     public function create()
     {
-        return view('admin.reservation.create');
+        return view('admin.reservation.create')->with('storeReservation',"Réservation ajoutée avec succées");
     }
 
     /**
@@ -90,7 +90,7 @@ class ReservationController extends Controller
         $validatedData = $request->validate($this->validationRules());
 
 $reservation->update($validatedData);
-return redirect()->route('reservations.show',$reservation);
+return redirect()->route('reservations.show',$reservation)->with('updateReservation',"Réservation modifiée avec succées");
 
 
     }
@@ -104,7 +104,7 @@ return redirect()->route('reservations.show',$reservation);
     public function destroy(Reservation $reservation)
     {
         $reservation->delete();
-        return redirect()->route('reservations.index');
+        return redirect()->route('reservations.index')->with('deleteReservation','La Reservation est supprimée!');
     }
 
     private function validationRules(){

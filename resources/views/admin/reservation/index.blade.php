@@ -1,6 +1,14 @@
 @extends('layouts.admin')
 
 @section('main')
+@if(session('deleteReservation'))
+<div class="alert alert-dismissible alert-success fade show" role="alert">
+{{session ('deleteReservation')}}
+ <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+ <span aria-hidden="true">&times;</span>
+ </bytton>
+</div>
+@endif 
 <a href="{{route('reservations.create')}}" class="btn btn-outline-primary  float-right">Ajouter nouvelle Réservation<a>
 <h3>Liste des Reservations :</h3>
 <table class="table">

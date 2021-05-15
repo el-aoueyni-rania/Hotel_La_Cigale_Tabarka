@@ -47,7 +47,7 @@ class RestaurationController extends Controller
      */
     public function show(Restauration $restauration)
     {
-        //
+        return view('admin.restauration.show' ,  ['restauration' => $restauration]);
     }
 
     /**

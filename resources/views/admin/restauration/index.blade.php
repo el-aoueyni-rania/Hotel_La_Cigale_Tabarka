@@ -1,5 +1,13 @@
 @extends('layouts.admin')
 @section('main')
+@if (session('deleteRestauration'))
+    <div class="alert alert-dismissible alert-success fade show" role="alert">
+      {{ session('deleteRestauration') }}
+      <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+        <span aria-hidden="true">&times;</span>
+      </button>
+    </div>
+@endif
 <a href="{{ route('restaurations.create' ) }}" class="btn btn-outline-primary float-right"> <i class="fas fa-plus"></i> Add new restauration</a>
     <h2> <i class="fas fa-utensils"></i> Restauration List</h2>
     <table class="table table-hover">

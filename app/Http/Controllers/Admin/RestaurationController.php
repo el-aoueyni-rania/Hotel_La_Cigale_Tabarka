@@ -51,7 +51,7 @@ class RestaurationController extends Controller
          */
       // 2nd method
       $restauration = Restauration::create($validatedData);
-      return redirect()->route('restaurations.show' , $restauration);
+      return redirect()->route('restaurations.show' , $restauration)->with('storeRestauration' , 'Restauration has been added successfuly !!!');
     }
 
     /**
@@ -99,7 +99,7 @@ class RestaurationController extends Controller
          */
       // 2nd method : mass assignement
         $restauration->update($validatedData);
-        return redirect()->route('restaurations.show' , $restauration);
+        return redirect()->route('restaurations.show' , $restauration)->with('updateRestauration' , 'Restauration has been updated successfuly !!!');
     }
 
     /**
@@ -111,7 +111,7 @@ class RestaurationController extends Controller
     public function destroy(Restauration $restauration)
     {
         $restauration->delete();
-        return redirect()->route('restaurations.index');
+        return redirect()->route('restaurations.index')->with('deleteRestauration' , 'Restauration has been deleted !!!');
     }
     private function validationRules()
     {

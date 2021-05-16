@@ -5,6 +5,7 @@ namespace App\Http\Middleware;
 use Closure;
 use Illuminate\Support\Facades\Auth;
 
+
 class CheckIfAdmin
 {
     /**
@@ -15,9 +16,13 @@ class CheckIfAdmin
      * @return mixed
      */
     public function handle($request, Closure $next)
-    { if(!Auth::user()->admin){
-return redirect('home');
-    }
+    {
+
+        if(!Auth::user()->admin){
+            return redirect('home');
+
+        }
+
         return $next($request);
     }
 }

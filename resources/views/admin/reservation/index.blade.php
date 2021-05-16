@@ -6,7 +6,7 @@
 {{session ('deleteReservation')}}
  <button type="button" class="close" data-dismiss="alert" aria-label="Close">
  <span aria-hidden="true">&times;</span>
- </bytton>
+ </button>
 </div>
 @endif 
 <a href="{{route('reservations.create')}}" class="btn btn-outline-primary  float-right"> <i class="fas fa-plus-square"></i> Ajouter nouvelle Réservation<a>

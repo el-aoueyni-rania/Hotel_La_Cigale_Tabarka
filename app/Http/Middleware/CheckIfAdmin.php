@@ -22,6 +22,7 @@ class CheckIfAdmin
             return redirect('home');
 
         }
+
         return $next($request);
     }
 }

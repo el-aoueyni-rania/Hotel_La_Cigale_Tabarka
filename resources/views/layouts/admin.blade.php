@@ -19,6 +19,7 @@
 <!-- Scripts -->
 <script src="{{ asset('js/app.js') }}" defer></script>
 
+
     <!-- Favicons -->
 <link rel="apple-touch-icon" href="/docs/4.6/assets/img/favicons/apple-touch-icon.png" sizes="180x180">
 <link rel="icon" href="/docs/4.6/assets/img/favicons/favicon-32x32.png" sizes="32x32" type="image/png">
@@ -40,13 +41,13 @@
 
 @include('layouts.navbar')
 
+
 <div class="container-fluid">
   <div class="row">
     <nav id="sidebarMenu" class="col-md-3 col-lg-2 d-md-block bg-light sidebar collapse">
       <div class="sidebar-sticky pt-3">
         <ul class="nav flex-column">
           <li class="nav-item">
-
 
             <a class="nav-link active" href="/admin-dashboard">
               <span data-feather="home"></span>
@@ -75,12 +76,15 @@
             <a class="nav-link" href="#">
               <span data-feather="bar-chart-2"></span>
               Services
+
             </a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="/bienetres">
               <span data-feather="layers"></span>
+
               Bien Etres
+
             </a>
           </li>
           <li class="nav-item">
@@ -132,9 +136,9 @@
     @yield('main')
   </main>
 
+
   </div>
 </div>
-
 
 
     <script src="https://code.jquery.com/jquery-3.5.1.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>

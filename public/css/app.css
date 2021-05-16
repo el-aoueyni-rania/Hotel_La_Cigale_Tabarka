@@ -10019,6 +10019,7 @@ h3 {
   font-variant: normal;
   text-rendering: auto;
   line-height: 1;
+
 }
 
 .fa-lg {
@@ -10294,6 +10295,7 @@ readers do not read off random characters that represent icons */
 .fa-align-right:before {
   content: "";
 }
+
 
 .fa-alipay:before {
   content: "";
@@ -16079,6 +16081,28 @@ readers do not read off random characters that represent icons */
   width: auto;
 }
 
+
+.k
+{
+  width : 50px ;
+  height : 50px;
+  border: solid black;
+  border-radius: 10px;
+  margin: 5px;
+  box-shadow: 5px 5px 5px black;
+}
+.ft{
+  font-style: italic;
+  color: black;
+}
+.transbox {
+  background-color: #ffffff;
+  opacity: 0.8;
+  font-weight: bold;
+  color: #000000;
+}
+
+
 /*!
  * Font Awesome Free 5.15.3 by @fontawesome - https://fontawesome.com
  * License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License)
@@ -16131,15 +16155,3 @@ readers do not read off random characters that represent icons */
   font-weight: 400;
 }
 
-
-/******* Nav BarLa cigale Tabarka*******************/
-.k
-{
-  width : 50px ;
-  height : 50px;
-  border: solid black;
-  border-radius: 10px;
-  margin: 5px;
-
-  box-shadow: 5px 5px 5px black;
-}

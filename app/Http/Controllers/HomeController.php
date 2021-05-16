@@ -4,9 +4,8 @@ namespace App\Http\Controllers;
 
 
 use App\bienetre;
+
 use Illuminate\Http\Request;
-use Illuminate\Auth;
-use SebastianBergmann\CodeCoverage\Report\Html\Dashboard;
 
 class HomeController extends Controller
 {
@@ -17,8 +16,6 @@ class HomeController extends Controller
      */
     public function __construct()
     {
-
-
         $this->middleware('auth')->except('welcome');
 
     }
@@ -28,16 +25,15 @@ class HomeController extends Controller
      *
      * @return \Illuminate\Contracts\Support\Renderable
      */
-    public function index()
-    {
-        return view('home');
-    }
-
+    /*public function index()
+   {
+       return view('home');
+    }*/
     public function welcome()
     {
-
         return view('welcome');
     }
+
 public function redirectTo(){
 
     if(auth::user()->admin){
@@ -52,5 +48,6 @@ return '/home';
         return view('bienetre' ,['bienetres'=> $bienetres]);
         //return view('userRoles' , ['user_roles' => $userRoles]);
     }
+
 
 }

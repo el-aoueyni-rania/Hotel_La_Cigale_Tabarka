@@ -11,7 +11,7 @@
 
     <link rel="canonical" href="https://getbootstrap.com/docs/4.6/examples/dashboard/">
 
-    
+
 
     <!-- Bootstrap core CSS -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
@@ -30,14 +30,14 @@
 <meta name="theme-color" content="#563d7c">
 
 
-   
 
-    
+
+
     <!-- Custom styles for this template -->
     <link href="{{ asset('css/admin.css') }}" rel="stylesheet">
   </head>
   <body>
-    
+
 @include('layouts.navbar')
 
 <div class="container-fluid">
@@ -46,6 +46,8 @@
       <div class="sidebar-sticky pt-3">
         <ul class="nav flex-column">
           <li class="nav-item">
+
+
             <a class="nav-link active" href="/admin-dashboard">
               <span data-feather="home"></span>
               Dashboard <span class="sr-only">(current)</span>
@@ -76,7 +78,7 @@
             </a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">
+            <a class="nav-link" href="/bienetres">
               <span data-feather="layers"></span>
               Services
             </a>
@@ -85,6 +87,7 @@
             <a class="nav-link" href="#">
               <span data-feather="users"></span>
               Utilisateurs
+
             </a>
           </li>
         </ul>
@@ -128,14 +131,17 @@
       <br><br><br>
     @yield('main')
   </main>
+
   </div>
 </div>
+   <!-- Scripts -->
+   <script src="{{ asset('js/app.js') }}" defer></script>
 
 
     <script src="https://code.jquery.com/jquery-3.5.1.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
       <script>window.jQuery || document.write('<script src="/docs/4.6/assets/js/vendor/jquery.slim.min.js"><\/script>')</script><script src="/docs/4.6/dist/js/bootstrap.bundle.min.js" integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns" crossorigin="anonymous"></script>
 
-      
+
         <script src="https://cdn.jsdelivr.net/npm/feather-icons@4.28.0/dist/feather.min.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.4/dist/Chart.min.js"></script>
         <script src="{{ asset('js/admin.js') }}" defer></script>

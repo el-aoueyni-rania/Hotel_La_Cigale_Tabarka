@@ -14,13 +14,16 @@
 Route::get('/','HomeController@welcome') ;
 Auth::routes();
 
-Route::get('/home', 'HomeController@index')->name('home');
+Route::get('/welcome', 'HomeController@welcome')->name('welcome');
 
+Route::get('/bienetre', 'HomeController@bienetre')->name('bienetre');
 
+Route::resource('bienetres', 'Admin\BienetreController');
 
 Route::get('/admin-dashboard', function(){
 return view('admin.dashboard');
 })->middleware('auth' , 'admin' )->name('admin.dashboard');
+
 
 
 

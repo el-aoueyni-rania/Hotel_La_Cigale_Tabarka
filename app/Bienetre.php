@@ -19,5 +19,7 @@ class Bienetre extends Model
         public function reservations(){
             return $this->HasMany('App\Reservation');
         }
+
+        protected $guarded = [];
 }
 

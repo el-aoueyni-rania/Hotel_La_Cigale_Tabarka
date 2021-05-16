@@ -11,7 +11,7 @@ $factory->define(Bienetre::class, function (Faker $faker) {
         'Type_de_Bienetres_choisie' => $faker -> word(),
         'Description' => $faker -> paragraph(1),
         'prix' => $faker -> numberBetween($min = 10, $max = 70),
-        'Picture'=>$faker ->imageUrl(),
+        //'Picture'=>$faker ->imageUrl(),
         'user_id'=>User::get('id')->random(),
         'client_id'=>Reservation::get('id')->random(),
         'created_at' => now()

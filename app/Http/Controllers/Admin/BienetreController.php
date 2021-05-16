@@ -39,12 +39,12 @@ class BienetreController extends Controller
     public function store(Request $request)
     {
        $validateData = $request->validate([
-           'Type_de_Bienetres_choisie' => 'required|min:2',
-           'prix' => 'required|min:2',
+           'Type_de_Bienetres_choisie' => 'required',
+           'prix' => 'required',
            'Description' => 'required'
            ]);
-        $bienetre=Bienetre::create($validateData);
-        return redirect()->route('bienetre.bcreate', $bienetre);
+        $bienetre = Bienetre::create($validateData);
+        return redirect()->route('bienetres.show', $bienetre)->with('storeBienetre', "Bienetre Has been Upadted !");
     }
 
     /**
@@ -67,7 +67,7 @@ class BienetreController extends Controller
      */
     public function edit(Bienetre $bienetre)
     {
-        //
+        return view('admin.bienetre.bedit',  ['bienetre' =>$bienetre]);
     }
 
     /**
@@ -79,7 +79,14 @@ class BienetreController extends Controller
      */
     public function update(Request $request, Bienetre $bienetre)
     {
-        //
+        $validateData = $request->validate([
+            'Type_de_Bienetres_choisie' => 'required',
+            'prix' => 'required',
+            'Description' => 'required'
+            ]);
+            $bienetre->update($validateData);
+
+        return view('admin.bienetre.bdetail',  ['bienetre' =>$bienetre])->with('updateBienetre', "Bienetre Has been Upadted !");
     }
 
     /**
@@ -90,6 +97,18 @@ class BienetreController extends Controller
      */
     public function destroy(Bienetre $bienetre)
     {
-        //
+        $bienetre->delete();
+        return redirect()->route('bienetres.index')->with('deleteBienetre', 'Bienetre has been deleted !');
     }
-}
+       private function validationRules()
+        {
+            return[
+
+                    'Type_de_Bienetres_choisie' => 'required',
+                    'prix' => 'required',
+                    'Description' => 'required'
+
+            ];
+        }
+    }
+

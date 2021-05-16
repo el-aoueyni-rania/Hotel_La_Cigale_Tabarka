@@ -20,6 +20,6 @@ class Bienetre extends Model
             return $this->HasMany('App\Reservation');
         }
 
-        //protected $guarded = [];
+        protected $guarded = [];
 }
 

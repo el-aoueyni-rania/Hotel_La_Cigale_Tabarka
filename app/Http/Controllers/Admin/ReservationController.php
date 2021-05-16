@@ -115,6 +115,7 @@ return redirect()->route('reservations.show',$reservation)->with('updateReservat
             'nbr_chambres' => 'required',
             'nbr_adultes' => 'required',
             'nbr_enfants' => 'required',
+            'user_id' => 'required',
         ];
 
     }

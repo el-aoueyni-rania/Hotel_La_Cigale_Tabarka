@@ -21,6 +21,7 @@
 <div class="card" style="width: 25rem;">
   <div class="card-body">
     <h5 class="card-title">Nom du client : <strong> {{$reservation->Client_name}} </strong></h5>
+    <h5 class="card-title">Id du client : <strong> {{$reservation->user_id}} </strong></h5>
     <h6 class="card-subtitle mb-2 text-muted">Détails du réservation :</h6>
     <p class="card-text">Nombre de nuits: <strong>{{$reservation->nbr_nuits}}</strong></p>
     <p class="card-text">Nombre de chambres: <strong>{{$reservation->nbr_chambres}}</strong></p>

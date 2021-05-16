@@ -1,6 +1,6 @@
 @csrf
 <div class="form-group">
-<label for="Client_name">Nom :</label>
+<label for="Client_name">Nom du client:</label>
 <input type="text" name="Client_name" id="Client_name" value="{{ $reservation->Client_name ?? old('Client_name')}}" class="form-control @error('Client_name') is-invalid @enderror" placeholder="Client_name" >
 @error('Client_name')<div class="text text-danger"> {{$message}} </div>@enderror
 </div>
@@ -48,6 +48,10 @@
 </div>
 
 </div>
+<div class="form-group">
+<label for="user_id">Id du client :</label>
+<input type="text" name="user_id" id="user_id"  value="{{$reservation->user_id ?? old('user_id')}}" class="form-control @error('user_id') is-invalid @enderror" placeholder="Id du client" >
+@error('user_id')<div class="text text-danger"> {{$message}} </div>@enderror
 
 <div class="row">
 <div class="col"><button type="submit" class="btn btn-block btn-outline-primary">Valider</div>

@@ -74,13 +74,13 @@
           <li class="nav-item">
             <a class="nav-link" href="#">
               <span data-feather="bar-chart-2"></span>
-              Bien Etres
+              Services
             </a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="/bienetres">
               <span data-feather="layers"></span>
-              Services
+              Bien Etres
             </a>
           </li>
           <li class="nav-item">

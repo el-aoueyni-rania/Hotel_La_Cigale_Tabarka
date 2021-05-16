@@ -25,10 +25,6 @@ return view('admin.dashboard');
 })->middleware('auth' , 'admin' )->name('admin.dashboard');
 
 
-
-
-
-
 Route::resource('restaurations', 'Admin\RestaurationController');
 
 

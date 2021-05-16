@@ -110,7 +110,8 @@ class RestaurationController extends Controller
      */
     public function destroy(Restauration $restauration)
     {
-        //
+        $restauration->delete();
+        return redirect()->route('restaurations.index');
     }
     private function validationRules()
     {

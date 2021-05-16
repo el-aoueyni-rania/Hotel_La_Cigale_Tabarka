@@ -21,7 +21,7 @@
                 <td>{{ $restauration -> user_id}} </td>
                 <td>
                     <a href="{{ route('restaurations.show' , ['restauration' =>$restauration ->id]) }}" class="btn btn-info"><i class="fas fa-clipboard-list"></i></a>
-                    <a href="#" class="btn btn-warning"><i class="fas fa-edit"></i></a>
+                    <a href="{{ route('restaurations.edit' , ['restauration' =>$restauration ->id]) }}" class="btn btn-warning"><i class="fas fa-edit"></i></a>
                     <a href="#" class="btn btn-danger"><i class="fas fa-trash-alt"></i></a>
                 </td>
               </tr>

@@ -78,7 +78,7 @@ class RestaurationController extends Controller
      */
     public function edit(Restauration $restauration)
     {
-        //
+        return view('admin.restauration.edit' ,  ['restauration' => $restauration]);
     }
 
     /**
@@ -90,7 +90,27 @@ class RestaurationController extends Controller
      */
     public function update(Request $request, Restauration $restauration)
     {
-        //
+        
+        $validatedData = $request->validate([
+            'nom_restaurant' =>'required|min:2',
+            'menu' =>'required|min:4',
+            'fruits' =>'required|min:3',
+            'boissons' =>'required|min:3',
+            'user_id' =>'required',
+        ]);
+
+          // first method
+        /** 
+         *   $restauration->nom_restaurant = $request->nom_restaurant;
+         *   $restauration->menu = $request->menu;
+         *   $restauration->fruits = $request->fruits;
+         *   $restauration->boissons = $request->boissons;
+         *   $restauration->user_id = $request->user_id;
+         *   $restauration->save();
+         */
+      // 2nd method : mass assignement
+        $restauration->update($validatedData);
+        return redirect()->route('restaurations.show' , $restauration);
     }
 
     /**

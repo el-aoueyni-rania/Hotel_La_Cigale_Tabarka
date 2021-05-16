@@ -15,6 +15,7 @@ Route::get('/','HomeController@welcome') ;
 Auth::routes();
 
 
+
 Route::get('/home', 'HomeController@index')->name('home');
 
 Route::get('/welcome', 'HomeController@welcome')->name('welcome');
@@ -32,7 +33,7 @@ Route::resource('restaurations', 'Admin\RestaurationController');
 
 Route::resource('reservations','Admin\ReservationController');
 
-
+Route::resource('users','Admin\UserController');
 Route::resource('bienetres', 'Admin\BienetreController');
 
 

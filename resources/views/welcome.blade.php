@@ -6,6 +6,7 @@
 
 <div class="row">
                 <div class="col-lg-3">
+                    <br><br>  
                     <h1 class="my-4">Nos Services</h1>
                     <div class="list-group">
                         <a class="list-group-item" href="#!">Reservations</a>
@@ -15,7 +16,9 @@
                         <a class="list-group-item" href="#!">Services</a>
                     </div>
                 </div>
+               
                 <div class="col-lg-9">
+                    <br><br> 
                     <div class="carousel slide my-4" id="carouselExampleIndicators" data-ride="carousel">
                         <ol class="carousel-indicators">
                             <li class="active" data-target="#carouselExampleIndicators" data-slide-to="0"></li>

@@ -37,13 +37,8 @@ class RestaurationController extends Controller
     public function store(Request $request)
     {
         //dd($request);
-        $validatedData = $request->validate([
-            'nom_restaurant' =>'required|min:2',
-            'menu' =>'required|min:4',
-            'fruits' =>'required|min:3',
-            'boissons' =>'required|min:3',
-            'user_id' =>'required',
-        ]);
+        $validatedData = $request->validate($this->validationRules());
+    
         // first method
         /**
          *   $restauration = new Restauration ; 
@@ -91,13 +86,7 @@ class RestaurationController extends Controller
     public function update(Request $request, Restauration $restauration)
     {
         
-        $validatedData = $request->validate([
-            'nom_restaurant' =>'required|min:2',
-            'menu' =>'required|min:4',
-            'fruits' =>'required|min:3',
-            'boissons' =>'required|min:3',
-            'user_id' =>'required',
-        ]);
+        $validatedData = $request->validate($this->validationRules());
 
           // first method
         /** 
@@ -122,5 +111,15 @@ class RestaurationController extends Controller
     public function destroy(Restauration $restauration)
     {
         //
+    }
+    private function validationRules()
+    {
+        return [
+            'nom_restaurant' =>'required|min:2',
+            'menu' =>'required|min:4',
+            'fruits' =>'required|min:3',
+            'boissons' =>'required|min:3',
+            'user_id' =>'required',
+        ];
     }
 }

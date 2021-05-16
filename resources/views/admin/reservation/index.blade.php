@@ -11,7 +11,7 @@
 @endif 
 <a href="{{route('reservations.create')}}" class="btn btn-outline-primary  float-right"> <i class="fas fa-plus-square"></i> Ajouter nouvelle Réservation<a>
 <h3> <i class="fas fa-hotel"></i> Liste des Reservations :</h3>
-<table class="table">
+<table class="table table-hover">
   <thead>
     <tr>
       <th scope="col"><i class="fab fa-slack-hash"></i>Id_Reservation</th>

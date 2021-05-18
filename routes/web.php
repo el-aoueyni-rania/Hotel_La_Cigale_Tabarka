@@ -37,3 +37,4 @@ Route::resource('users','Admin\UserController');
 Route::resource('bienetres', 'Admin\BienetreController');
 
 
+Route::resource('services', 'Admin\ServiceController');

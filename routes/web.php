@@ -36,3 +36,4 @@ Route::resource('reservations','Admin\ReservationController');
 Route::resource('bienetres', 'Admin\BienetreController');
 
 
+Route::resource('services', 'Admin\ServiceController');

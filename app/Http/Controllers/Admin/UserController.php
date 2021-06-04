@@ -25,7 +25,7 @@ class UserController extends Controller
      */
     public function create()
     {
-        //
+        return view('admin.user.create');
     }
 
     /**
@@ -36,7 +36,12 @@ class UserController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        
+        $validatedData = $request->validate($this->validationRules());
+     
+
+        $user = User::create($validatedData);
+        return redirect()->route('users.index' , $user);
     }
 
     /**
@@ -47,7 +52,7 @@ class UserController extends Controller
      */
     public function show(User $user)
     {
-        //
+        return view('admin.user.show' ,  ['user' => $user]);
     }
 
     /**
@@ -58,7 +63,7 @@ class UserController extends Controller
      */
     public function edit(User $user)
     {
-        //
+        return view('admin.user.edit',['user' => $user]);
     }
 
     /**
@@ -70,7 +75,13 @@ class UserController extends Controller
      */
     public function update(Request $request, User $user)
     {
-        //
+        $validatedData = $request->validate($this->validationRules());
+
+
+
+        $user->update($validatedData);
+        return redirect()->route('users.index' , $user);
+
     }
 
     /**
@@ -81,6 +92,17 @@ class UserController extends Controller
      */
     public function destroy(User $user)
     {
-        //
+        $user->delete();
+        return redirect()->route('users.index')->with('deleteUser' , 'user has been deleted !!!');
+
+    }
+
+    private function validationRules()
+    {
+        return [
+            'name' => 'required',
+            'email' => 'required|min:3',
+            'password' => 'required',
+        ];
     }
 }

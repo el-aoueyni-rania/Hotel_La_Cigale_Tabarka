@@ -1,5 +1,21 @@
 @extends('layouts.admin')
 @section('main')
+@if(session('storeUser'))
+<div class="alert alert-dismissible alert-success fade show" role="alert">
+{{session ('storeUser')}}
+ <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+ <span aria-hidden="true">&times;</span>
+ </bytton>
+</div>
+@endif
+@if(session('updateUser'))
+<div class="alert alert-dismissible alert-success fade show" role="alert">
+{{session ('updateUser')}}
+ <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+ <span aria-hidden="true">&times;</span>
+ </bytton>
+</div>
+@endif
   <h3><i class="fas fa-snowboarding"></i> users Details : {{ $user->id}}</h3>
   <div class="card" style="width: 18rem;">
   <div class="card-body">

@@ -41,7 +41,8 @@ class UserController extends Controller
      
 
         $user = User::create($validatedData);
-        return redirect()->route('users.index' , $user);
+        return redirect()->route('users.show' , $user)->with('storeUser' , 'User has been added successfuly !!!');
+        
     }
 
     /**
@@ -80,7 +81,8 @@ class UserController extends Controller
 
 
         $user->update($validatedData);
-        return redirect()->route('users.index' , $user);
+        return redirect()->route('users.show' , $user)->with('updateUser' , 'User has been updated successfuly !!!');
+    
 
     }
 

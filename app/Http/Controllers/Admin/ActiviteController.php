@@ -46,7 +46,8 @@ class ActiviteController extends Controller
         // ]);
 
         $activite = Activite::create($validatedData);
-        return redirect()->route('activites.show' , $activite);
+        return redirect()->route('activites.show' , $activite)->with('storeActivite' , 'Activity has been added successfuly !!!');
+        
 
 
     }
@@ -88,7 +89,8 @@ class ActiviteController extends Controller
 
 
         $activite->update($validatedData);
-        return redirect()->route('activites.show' , $activite);
+        return redirect()->route('activites.show' , $activite)->with('updateActivite' , 'Activity has been updated successfuly !!!');
+    
 
     }
 
@@ -101,7 +103,7 @@ class ActiviteController extends Controller
     public function destroy(Activite $activite)
     {
         $activite->delete();
-        return redirect()->route('activites.index')->with('deleteActivite' , 'Activite has been deleted !!!');
+        return redirect()->route('activites.index')->with('deleteActivite' , 'Activity has been deleted !!!');
 
         
     }

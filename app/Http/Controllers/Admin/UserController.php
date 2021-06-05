@@ -3,8 +3,10 @@
 namespace App\Http\Controllers\admin;
 
 use App\Http\Controllers\Controller;
+use App\Mail\NewUser;
 use App\User;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Mail;
 
 class UserController extends Controller
 {
@@ -41,6 +43,9 @@ class UserController extends Controller
      
 
         $user = User::create($validatedData);
+
+        Mail::to($user->email)->send(new NewUser($user));
+
         return redirect()->route('users.show' , $user)->with('storeUser' , 'User has been added successfuly !!!');
         
     }

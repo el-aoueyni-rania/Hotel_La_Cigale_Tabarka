@@ -1,13 +1,21 @@
 @extends('layouts.admin')
 @section('main')
+@if(session('deleteActivite'))
+<div class="alert alert-dismissible alert-success fade show" role="alert">
+{{session ('deleteActivite')}}
+ <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+ <span aria-hidden="true">&times;</span>
+ </button>
+</div>
+@endif
 <a href="{{ route('activites.create') }}" class="btn btn-outline-primary float-right"> <i class="fas fa-plus"></i> Add new activities</a>
-<h2>  Activities List</h2>
+<h2> <i class="fas fa-skating"></i> Activities List</h2>
  <table class="table table-hover">
   <thead>
     <tr>
       <th scope="col">#</th>
-      <th scope="col">Nom de l'activités</th>
-      <th scope="col">id_user</th>
+      <th scope="col"><i class="fas fa-skating"></i> Nom de l'activités</th>
+      <th scope="col"><i class="fas fa-user"></i>id_user</th>
       <th scope="col"><i class="fas fa-cogs"></i> Opérations</th>
       
     </tr>

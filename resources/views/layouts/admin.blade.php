@@ -66,8 +66,8 @@
           </li>
           <li class="nav-item">
             <a class="nav-link" href="{{route('activites.index')}}">
-              <span data-feather="users"></span>
-              Activités
+              <!-- <span data-feather="users"></span> -->
+              <i class="fas fa-snowboarding"></i>    Activités
             </a>
           </li>
           <li class="nav-item">

@@ -16,7 +16,7 @@
  </bytton>
 </div>
 @endif
-  <h3><i class="fas fa-snowboarding"></i> users Details : {{ $user->id}}</h3>
+  <h3><i class="fas fa-clipboard-list"></i> users Details : {{ $user->id}}</h3>
   <div class="card" style="width: 18rem;">
   <div class="card-body">
     <h5 class="card-title"><strong>Name : {{ $user ->name}} </strong></h5>

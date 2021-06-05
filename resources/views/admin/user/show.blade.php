@@ -5,7 +5,7 @@
 {{session ('storeUser')}}
  <button type="button" class="close" data-dismiss="alert" aria-label="Close">
  <span aria-hidden="true">&times;</span>
- </bytton>
+ </button>
 </div>
 @endif
 @if(session('updateUser'))
@@ -13,7 +13,7 @@
 {{session ('updateUser')}}
  <button type="button" class="close" data-dismiss="alert" aria-label="Close">
  <span aria-hidden="true">&times;</span>
- </bytton>
+ </button>
 </div>
 @endif
   <h3><i class="fas fa-clipboard-list"></i> users Details : {{ $user->id}}</h3>

@@ -37,11 +37,7 @@ class ServiceController extends Controller
     public function store(Request $request)
     {
         // dd($request);
-        $validatedData = $request->validate([
-            'nom' => 'required|min:3',
-            'type' => 'required',
-            'user_id' =>'required',
-        ]);
+        $validatedData = $request->validate($this->validationRules());
 
         // $service =new Service ;
         // $service->nom = $request->nom;
@@ -50,7 +46,7 @@ class ServiceController extends Controller
         // $service->save();
 
         $service = Service::create($validatedData);
-        return redirect()->route('services.show' , $service);
+        return redirect()->route('services.show' , $service)->with('storeService' , 'service has been added !!!');
     }
 
     /**
@@ -72,7 +68,7 @@ class ServiceController extends Controller
      */
     public function edit(Service $service)
     {
-        //
+        return view('admin.service.edit' ,  ['service' => $service]);
     }
 
     /**
@@ -84,7 +80,9 @@ class ServiceController extends Controller
      */
     public function update(Request $request, Service $service)
     {
-        //
+        $validatedData = $request->validate($this->validationRules());
+        $service->update($validatedData);
+        return redirect()->route('services.show' , $service)->with('updateService' , 'service has been updated !!!');
     }
 
     /**
@@ -95,6 +93,16 @@ class ServiceController extends Controller
      */
     public function destroy(Service $service)
     {
-        //
+        $service->delete();
+        return redirect()->route('services.index')->with('deleteService' , 'service has been deleted !!!');
+    }
+    private function validationRules()
+    {
+        return[
+            'nom' => 'required|min:3',
+            'type' => 'required',
+            'user_id' =>'required',
+        ];
+
     }
 }

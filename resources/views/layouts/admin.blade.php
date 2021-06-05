@@ -54,32 +54,32 @@
             </a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="/reservations">
+            <a class="nav-link" href="{{route('reservations.index')}}">
               <span data-feather="file"></span>
               Reservations
             </a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="/restaurations">
+            <a class="nav-link" href="{{route('restaurations.index')}}">
               <span data-feather="shopping-cart"></span>
               Restaurations
             </a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="/activites">
+            <a class="nav-link" href="{{route('activites.index')}}">
               <span data-feather="users"></span>
               Activités
             </a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="/services">
+            <a class="nav-link" href="{{route('services.index')}}">
               <span data-feather="bar-chart-2"></span>
               Services
 
             </a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="/bienetres">
+            <a class="nav-link" href="{{route('bienetres.index')}}">
               <span data-feather="layers"></span>
 
               Bien Etres
@@ -87,7 +87,7 @@
             </a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="/users">
+            <a class="nav-link" href="{{route('users.index')}}">
               <span data-feather="users"></span>
               Utilisateurs
 

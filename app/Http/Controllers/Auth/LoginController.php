@@ -35,7 +35,13 @@ public function redirectTo(){
         return'/admin/dashboard';
     }
 
+
+    return'/welcome';
+
+     '/home';
+
     return '/home';
+
 
 }
     /**

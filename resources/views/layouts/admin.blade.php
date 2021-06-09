@@ -48,7 +48,19 @@
         <ul class="nav flex-column">
           <li class="nav-item">
 
+
+
+            <a class="nav-link active" href="/admin">
+
+            <a class="nav-link active" href="/admin-dashboard">
+
+
+
+            <a class="nav-link active" href="/admin-dashboard">
+
+
             <a class="nav-link active" href="{{route('admin.dashboard')}}">
+
               <span data-feather="home"></span>
               Dashboard <span class="sr-only">(current)</span>
             </a>
@@ -77,9 +89,19 @@
             </a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="{{route('bienetres.index')}}">
+
+            <a class="nav-link" href="/bienetres">
+              <span data-feather="layers"></span>
+
+
+              Bienetre
+
+
+              Services
+           <a class="nav-link" href="{{route('bienetres.index')}}">
             <i class="fas fa-smile-beam"></i>
               Bien Etres
+
 
             </a>
           </li>
@@ -95,6 +117,13 @@
       
       </div>
     </nav>
+
+
+    <main role="main" class="col-md-9 ml-sm-auto col-lg-10 px-md-4">
+   @yield('main')
+    </main>
+
+
 
     <main role="main" class="col-md-9 ml-sm-auto col-lg-10 px-md-4 p-3">
       <br><br><br>

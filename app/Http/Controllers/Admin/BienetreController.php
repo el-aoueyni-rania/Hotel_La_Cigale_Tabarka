@@ -27,7 +27,7 @@ class BienetreController extends Controller
      */
     public function create()
     {
-        return view('admin.bienetre.bcreate ');
+        return view('admin.bienetre.bcreate');
     }
 
     /**

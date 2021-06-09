@@ -19,12 +19,18 @@ Route::get('/welcome', 'HomeController@welcome')->name('welcome');
 Route::get('/bienetre', 'HomeController@bienetre')->name('bienetre');
 
 
+
 Route::get('/admin', function(){
     return view('admin.dashboard');
 })->middleware('auth','admin')->name('admin.dashboard');
 Route::resource('bienetres', 'Admin\BienetreController');
 /*
 
+Route::resource('bienetres', 'Admin\BienetreController');
+
+Route::get('/admin-dashboard', function(){
+return view('admin.dashboard');
+})->middleware('auth' , 'admin' )->name('admin.dashboard');
 Route::get('/admin-dashboard', function(){
 return view('admin.dashboard');
 })->middleware('auth' , 'admin' )->name('admin.dashboard');

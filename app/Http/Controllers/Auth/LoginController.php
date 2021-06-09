@@ -33,9 +33,13 @@ public function redirectTo(){
         return'/admin';
     }
 
+
     return'/welcome';
 
      '/home';
+
+    return '/home';
+
 
 }
     /**

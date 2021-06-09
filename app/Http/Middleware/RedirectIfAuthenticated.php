@@ -20,11 +20,18 @@ class RedirectIfAuthenticated
     {
         if (Auth::guard($guard)->check()) {
            // return redirect(RouteServiceProvider::HOME);
+
            if (Auth::user()->admin){
             return'/admin';
 
            if(auth::user()->admin){
             return '/admin-dashboard';
+
+
+           if(auth::user()->admin){
+            return '/admin-dashboard';
+
+
         }
         return'/welcome';
         }

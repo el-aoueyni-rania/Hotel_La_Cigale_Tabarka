@@ -2,6 +2,7 @@
 
 namespace App\Http\Middleware;
 
+
 use Illuminate\Support\Facades\Auth;
 use Closure;
 
@@ -22,9 +23,11 @@ class CheckIfAdmin
     public function handle($request, Closure $next)
     {
 
+
         if(Auth::user()->Admin)
         {
             return redirect('welcome');
+
 
         if(!Auth::user()->admin){
             return redirect('home');

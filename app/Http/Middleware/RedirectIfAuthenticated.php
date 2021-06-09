@@ -24,14 +24,14 @@ class RedirectIfAuthenticated
            if (Auth::user()->admin){
             return'/admin';
 
-           if(auth::user()->admin){
+           /*if(auth::user()->admin){
             return '/admin-dashboard';
 
 
            if(auth::user()->admin){
             return '/admin-dashboard';
 
-
+*/
         }
         return'/welcome';
         }

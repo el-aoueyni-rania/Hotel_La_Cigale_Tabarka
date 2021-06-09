@@ -16,7 +16,8 @@
     <!-- Bootstrap core CSS -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
 
-
+<!-- Scripts -->
+<script src="{{ asset('js/app.js') }}" defer></script>
 
     <!-- Favicons -->
 <link rel="apple-touch-icon" href="/docs/4.6/assets/img/favicons/apple-touch-icon.png" sizes="180x180">
@@ -45,39 +46,53 @@
       <div class="sidebar-sticky pt-3">
         <ul class="nav flex-column">
           <li class="nav-item">
+
             <a class="nav-link active" href="/admin">
+
+            <a class="nav-link active" href="/admin-dashboard">
+
               <span data-feather="home"></span>
               Dashboard <span class="sr-only">(current)</span>
             </a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">
+            <a class="nav-link" href="/reservations">
               <span data-feather="file"></span>
-              Orders
+              Reservations
             </a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">
+            <a class="nav-link" href="/restaurations">
               <span data-feather="shopping-cart"></span>
-              Products
+              Restaurations
             </a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="#">
               <span data-feather="users"></span>
-              Customers
+              Activités
             </a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="#">
               <span data-feather="bar-chart-2"></span>
-              Reports
+              Bien Etres
             </a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="/bienetres">
               <span data-feather="layers"></span>
+
               Bienetre
+
+              Services
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">
+              <span data-feather="users"></span>
+              Utilisateurs
+
             </a>
           </li>
         </ul>
@@ -116,13 +131,22 @@
         </ul>
       </div>
     </nav>
+
     <main role="main" class="col-md-9 ml-sm-auto col-lg-10 px-md-4">
    @yield('main')
     </main>
+
+
+    <main role="main" class="col-md-9 ml-sm-auto col-lg-10 px-md-4 p-3">
+      <br><br><br>
+    @yield('main')
+  </main>
+
   </div>
 </div>
    <!-- Scripts -->
    <script src="{{ asset('js/app.js') }}" defer></script>
+
 
     <script src="https://code.jquery.com/jquery-3.5.1.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
       <script>window.jQuery || document.write('<script src="/docs/4.6/assets/js/vendor/jquery.slim.min.js"><\/script>')</script><script src="/docs/4.6/dist/js/bootstrap.bundle.min.js" integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns" crossorigin="anonymous"></script>

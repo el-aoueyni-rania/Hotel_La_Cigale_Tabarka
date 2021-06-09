@@ -56,7 +56,7 @@ class User extends Authenticatable
      // relation one to many between restauration and utilisateur
      public function restauration()
     {
-        return $this->belongsTo('App\Restauration');
+        return $this->hasMany('App\Restauration');
     }
 
     public function activite()

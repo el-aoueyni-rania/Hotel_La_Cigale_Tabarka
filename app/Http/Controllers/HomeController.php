@@ -2,6 +2,9 @@
 
 namespace App\Http\Controllers;
 
+
+use App\bienetre;
+
 use Illuminate\Http\Request;
 
 class HomeController extends Controller
@@ -14,6 +17,7 @@ class HomeController extends Controller
     public function __construct()
     {
         $this->middleware('auth')->except('welcome');
+
     }
 
     /**
@@ -29,4 +33,21 @@ class HomeController extends Controller
     {
         return view('welcome');
     }
+
+public function redirectTo(){
+
+    if(auth::user()->admin){
+        return '/admin-dashboard';
+    }
+return '/home';
+}
+
+    public function bienetre()
+    {
+        $bienetres=bienetre::inRandomOrder()->limit(10)->get();
+        return view('bienetre' ,['bienetres'=> $bienetres]);
+        //return view('userRoles' , ['user_roles' => $userRoles]);
+    }
+
+
 }

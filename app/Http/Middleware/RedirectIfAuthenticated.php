@@ -22,10 +22,12 @@ class RedirectIfAuthenticated
            // return redirect(RouteServiceProvider::HOME);
            if (Auth::user()->admin){
             return'/admin';
+
+           if(auth::user()->admin){
+            return '/admin-dashboard';
         }
         return'/welcome';
         }
-
         return $next($request);
     }
 }

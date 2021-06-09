@@ -1,4 +1,3 @@
-
 <!doctype html>
 <html lang="en">
   <head>
@@ -18,6 +17,7 @@
 
 <!-- Scripts -->
 <script src="{{ asset('js/app.js') }}" defer></script>
+
 
     <!-- Favicons -->
 <link rel="apple-touch-icon" href="/docs/4.6/assets/img/favicons/apple-touch-icon.png" sizes="180x180">
@@ -40,12 +40,14 @@
 
 @include('layouts.navbar')
 
+
 <div class="container-fluid">
   <div class="row">
     <nav id="sidebarMenu" class="col-md-3 col-lg-2 d-md-block bg-light sidebar collapse">
       <div class="sidebar-sticky pt-3">
         <ul class="nav flex-column">
           <li class="nav-item">
+
 
 
             <a class="nav-link active" href="/admin">
@@ -56,35 +58,38 @@
 
             <a class="nav-link active" href="/admin-dashboard">
 
+
+            <a class="nav-link active" href="{{route('admin.dashboard')}}">
+
               <span data-feather="home"></span>
               Dashboard <span class="sr-only">(current)</span>
             </a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="/reservations">
-              <span data-feather="file"></span>
+            <a class="nav-link" href="{{route('reservations.index')}}">
+            <i class="fas fa-hotel"></i>
               Reservations
             </a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="/restaurations">
-              <span data-feather="shopping-cart"></span>
-              Restaurations
+            <a class="nav-link" href="{{route('restaurations.index')}}">
+            <i class="fas fa-utensils"></i>              Restaurations
             </a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">
-              <span data-feather="users"></span>
-              Activités
+            <a class="nav-link" href="{{route('activites.index')}}">
+              <!-- <span data-feather="users"></span> -->
+              <i class="fas fa-snowboarding"></i>    Activités
             </a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">
-              <span data-feather="bar-chart-2"></span>
-              Bien Etres
+            <a class="nav-link" href="{{route('services.index')}}">
+            <i class="fas fa-concierge-bell"></i>              Services
+
             </a>
           </li>
           <li class="nav-item">
+
             <a class="nav-link" href="/bienetres">
               <span data-feather="layers"></span>
 
@@ -93,10 +98,15 @@
 
 
               Services
+           <a class="nav-link" href="{{route('bienetres.index')}}">
+            <i class="fas fa-smile-beam"></i>
+              Bien Etres
+
+
             </a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">
+            <a class="nav-link" href="{{route('users.index')}}">
               <span data-feather="users"></span>
               Utilisateurs
 
@@ -104,38 +114,7 @@
           </li>
         </ul>
 
-        <h6 class="sidebar-heading d-flex justify-content-between align-items-center px-3 mt-4 mb-1 text-muted">
-          <span>Saved reports</span>
-          <a class="d-flex align-items-center text-muted" href="#" aria-label="Add a new report">
-            <span data-feather="plus-circle"></span>
-          </a>
-        </h6>
-        <ul class="nav flex-column mb-2">
-          <li class="nav-item">
-            <a class="nav-link" href="#">
-              <span data-feather="file-text"></span>
-              Current month
-            </a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">
-              <span data-feather="file-text"></span>
-              Last quarter
-            </a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">
-              <span data-feather="file-text"></span>
-              Social engagement
-            </a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">
-              <span data-feather="file-text"></span>
-              Year-end sale
-            </a>
-          </li>
-        </ul>
+      
       </div>
     </nav>
 
@@ -151,10 +130,9 @@
     @yield('main')
   </main>
 
+
   </div>
 </div>
-   <!-- Scripts -->
-   <script src="{{ asset('js/app.js') }}" defer></script>
 
 
     <script src="https://code.jquery.com/jquery-3.5.1.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>

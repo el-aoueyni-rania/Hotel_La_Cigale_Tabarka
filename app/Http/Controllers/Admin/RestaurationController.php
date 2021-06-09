@@ -37,13 +37,8 @@ class RestaurationController extends Controller
     public function store(Request $request)
     {
         //dd($request);
-        $validatedData = $request->validate([
-            'nom_restaurant' =>'required|min:2',
-            'menu' =>'required|min:4',
-            'fruits' =>'required|min:3',
-            'boissons' =>'required|min:3',
-            'user_id' =>'required',
-        ]);
+        $validatedData = $request->validate($this->validationRules());
+    
         // first method
         /**
          *   $restauration = new Restauration ; 
@@ -56,7 +51,7 @@ class RestaurationController extends Controller
          */
       // 2nd method
       $restauration = Restauration::create($validatedData);
-      return redirect()->route('restaurations.show' , $restauration);
+      return redirect()->route('restaurations.show' , $restauration)->with('storeRestauration' , 'Restauration has been added successfuly !!!');
     }
 
     /**
@@ -78,7 +73,7 @@ class RestaurationController extends Controller
      */
     public function edit(Restauration $restauration)
     {
-        //
+        return view('admin.restauration.edit' ,  ['restauration' => $restauration]);
     }
 
     /**
@@ -90,7 +85,21 @@ class RestaurationController extends Controller
      */
     public function update(Request $request, Restauration $restauration)
     {
-        //
+        
+        $validatedData = $request->validate($this->validationRules());
+
+          // first method
+        /** 
+         *   $restauration->nom_restaurant = $request->nom_restaurant;
+         *   $restauration->menu = $request->menu;
+         *   $restauration->fruits = $request->fruits;
+         *   $restauration->boissons = $request->boissons;
+         *   $restauration->user_id = $request->user_id;
+         *   $restauration->save();
+         */
+      // 2nd method : mass assignement
+        $restauration->update($validatedData);
+        return redirect()->route('restaurations.show' , $restauration)->with('updateRestauration' , 'Restauration has been updated successfuly !!!');
     }
 
     /**
@@ -101,6 +110,17 @@ class RestaurationController extends Controller
      */
     public function destroy(Restauration $restauration)
     {
-        //
+        $restauration->delete();
+        return redirect()->route('restaurations.index')->with('deleteRestauration' , 'Restauration has been deleted !!!');
+    }
+    private function validationRules()
+    {
+        return [
+            'nom_restaurant' =>'required|min:2',
+            'menu' =>'required|min:4',
+            'fruits' =>'required|min:3',
+            'boissons' =>'required|min:3',
+            'user_id' =>'required',
+        ];
     }
 }

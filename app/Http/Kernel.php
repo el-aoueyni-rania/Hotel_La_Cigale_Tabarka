@@ -59,6 +59,7 @@ class Kernel extends HttpKernel
 
         'admin' => \App\Http\Middleware\CheckIfAdmin::class,
 
+
         'auth' => \App\Http\Middleware\Authenticate::class,
         'auth.basic' => \Illuminate\Auth\Middleware\AuthenticateWithBasicAuth::class,
         'bindings' => \Illuminate\Routing\Middleware\SubstituteBindings::class,

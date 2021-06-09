@@ -14,11 +14,10 @@
 Route::get('/','HomeController@welcome') ;
 Auth::routes();
 
-Route::get('/welcome', 'HomeController@welcome')->name('welcome');
 
-Route::get('/bienetre', 'HomeController@bienetre')->name('bienetre');
-
-
+route::middleware('auth')->group(function() {
+    Route::get('/home', 'HomeController@index')->name('home');
+    Route::get('/welcome', 'HomeController@welcome')->name('welcome');
 
 Route::get('/admin', function(){
     return view('admin.dashboard');
@@ -36,6 +35,19 @@ return view('admin.dashboard');
 })->middleware('auth' , 'admin' )->name('admin.dashboard');
 Route::resource('restaurations', 'Admin\RestaurationController');
 //Route::get('/bienetre', 'HomeController@bienetre')->name('bienetre');
-
-
-
+=======
+    // admin middlewere route group
+    route::middleware('admin')->namespace('Admin')->prefix('admin')->group(function() 
+    {
+        Route::get('/dashboard', function(){
+            return view('admin.dashboard');
+         }) ->name('admin.dashboard');
+        
+        Route::resource('activites', 'ActiviteController');
+        Route::resource('restaurations', 'RestaurationController');
+        Route::resource('reservations','ReservationController');
+        Route::resource('users','UserController');
+        Route::resource('bienetres', 'BienetreController');
+        Route::resource('services', 'ServiceController');
+    });
+});

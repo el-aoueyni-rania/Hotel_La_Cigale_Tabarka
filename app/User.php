@@ -9,7 +9,8 @@ use Illuminate\Notifications\Notifiable;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
 class User extends Authenticatable
-{
+{     protected $guarded = [];
+    
     use Notifiable;
 
     /**
@@ -63,4 +64,5 @@ class User extends Authenticatable
      {
         return $this->belongsTo('App\Activite');
      }
+     
 }

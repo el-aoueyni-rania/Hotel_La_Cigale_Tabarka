@@ -24,11 +24,6 @@ class CheckIfAdmin
     {
 
 
-        if(Auth::user()->Admin)
-        {
-            return redirect('welcome');
-
-
         if(!Auth::user()->admin){
             return redirect('home');
 

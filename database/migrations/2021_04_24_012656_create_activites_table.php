@@ -17,7 +17,7 @@ class CreateActivitesTable extends Migration
             $table->Increments('id');
             $table->string('Nom_activités',100);
             $table->date('Date_activités');
-            $table->dateTime('Temps_activités');
+            $table->time('Temps_activités');
             $table->integer('user_id')->unsigned();
             $table->timestamps();
             $table->foreign('user_id')->references('id')->on('users')->onDelete('no action')->onUpdate('no action');

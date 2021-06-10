@@ -25,8 +25,8 @@
   <tr>
       <th scope="row">{{ $key }}</th>
       <td>{{ $activite -> Nom_activités }}</td>
-      <!-- <td>{{ $activite -> Date_activités}}</td>
-      <td>{{ $activite -> Temps_activités }}</td> -->
+       {{-- <td>{{ $activite -> Date_activités}}</td>
+      <td>{{ $activite -> Temps_activités }}</td>  --}}
       <td>{{ $activite -> user_id}}</td>
 <td>
                   <a href="{{ route('activites.show' , ['activite' =>$activite ->id]) }}  " class="btn btn-info" title=" show activites : {{ $activite->id }} "><i class="fas fa-clipboard-list"></i></a>

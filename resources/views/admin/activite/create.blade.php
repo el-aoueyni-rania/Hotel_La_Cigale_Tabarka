@@ -5,7 +5,7 @@
             <i class="fas fa-plus"></i> Add new activities
         </legend>
         <form action="{{ route('activites.store') }}" method="post">
-        @include('admin.activite.form');
+        @include('admin.activite.form')
         </form>
     </fieldset>
 @endsection

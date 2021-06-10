@@ -5,7 +5,7 @@
             <i class="fas fa-plus"></i> Add new restauration 
         </legend>
         <form action="{{ route('restaurations.store') }}" method="post">
-        @include('admin.restauration.form');
+        @include('admin.restauration.form')
         </form>
      
     </fieldset>

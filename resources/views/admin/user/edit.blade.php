@@ -6,7 +6,7 @@
         </legend>
         <form action="{{ route('users.update',['user' =>$user ->id]) }}" method="post">
         @method('PUT')
-        @include('admin.user.form');
+        @include('admin.user.form')
         </form>
     </fieldset>
 @endsection

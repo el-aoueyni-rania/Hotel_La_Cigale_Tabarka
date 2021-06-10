@@ -1,5 +1,4 @@
 @csrf
-        @method('PUT')
         <div class="row">
             <div class="col">
                 <div class="form-group">
@@ -12,7 +11,7 @@
             </div>
             <div class="col">
                 <div class="form-group">
-                    <label for="prix">>Prix</label>
+                    <label for="prix">Prix</label>
                     <input type="text" name="prix" value="{{ $bienetre->prix ?? old('prix') }}"id="prix" class="form-control" placeholder="make it less costy :" >
                 @error('prix')
                     <div class="alert alert-danger">{{ $message }}</div>
@@ -28,6 +27,20 @@
                 <div class="alert alert-danger">{{ $message }}</div>
             @enderror
           </div>
+
+
+            <div class="form-group">
+                <label for="">user id : </label>
+                <input type="text" name="user_id" id="user_id" class="form-control @error('user_id') is-invalid @enderror"
+                 value="{{ $bienetre->user_id ?? old('user_id') }}" placeholder="enter user id">
+                @error('user_id')<div class="text-danger">{{ $message }}</div>@enderror
+            </div>
+            <div class="form-group">
+                <label for="">client id : </label>
+                <input type="text" name="client_id" id="client_id" class="form-control @error('client_id') is-invalid @enderror"
+                 value="{{ $bienetre->client_id ?? old('client_id') }}" placeholder="enter client id">
+                @error('client_id')<div class="text-danger">{{ $message }}</div>@enderror
+            </div>
           <div class="row">
               <div class="col"><button type="submit" class="btn btn-blick btn-outline-primary"><i class="fas fa-check-circle"></i> Save</button></div>
               <div class="col"><button type="reset" class="btn btn-blick btn-outline-secondary "><i class="fas fa-frown"></i>   Cancel</button></div>

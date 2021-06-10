@@ -41,7 +41,9 @@ class BienetreController extends Controller
        $validateData = $request->validate([
            'Type_de_Bienetres_choisie' => 'required',
            'prix' => 'required',
-           'Description' => 'required'
+           'Description' => 'required',
+           'user_id' =>'required',
+           'client_id' =>'required'
            ]);
         $bienetre = Bienetre::create($validateData);
         return redirect()->route('bienetres.show', $bienetre)->with('storeBienetre', "Bienetre Has been Upadted !");
@@ -82,7 +84,9 @@ class BienetreController extends Controller
         $validateData = $request->validate([
             'Type_de_Bienetres_choisie' => 'required',
             'prix' => 'required',
-            'Description' => 'required'
+            'Description' => 'required',
+            'user_id' =>'required',
+            'client_id' =>'required'
             ]);
             $bienetre->update($validateData);
 
@@ -106,7 +110,9 @@ class BienetreController extends Controller
 
                     'Type_de_Bienetres_choisie' => 'required',
                     'prix' => 'required',
-                    'Description' => 'required'
+                    'Description' => 'required',
+                    'user_id' =>'required',
+                    'client_id' =>'required'
 
             ];
         }

@@ -5,7 +5,7 @@
 {{session ('storeActivite')}}
  <button type="button" class="close" data-dismiss="alert" aria-label="Close">
  <span aria-hidden="true">&times;</span>
- </bytton>
+ </button>
 </div>
 @endif
 @if(session('updateActivite'))
@@ -13,10 +13,10 @@
 {{session ('updateActivite')}}
  <button type="button" class="close" data-dismiss="alert" aria-label="Close">
  <span aria-hidden="true">&times;</span>
- </bytton>
+ </button>
 </div>
 @endif 
-  <h3><i class="fas fa-snowboarding"></i> Activities Details : {{ $activite->id}}</h3>
+  <h3><i class="fas fa-swimmer"></i> Activities Details : {{ $activite->id}}</h3>
   <div class="card" style="width: 18rem;">
   <div class="card-body">
     <h5 class="card-title"><strong>Name : {{ $activite ->Nom_activités}} </strong></h5>

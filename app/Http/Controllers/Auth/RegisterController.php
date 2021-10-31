@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Auth;
 use App\Http\Controllers\Controller;
 use App\Providers\RouteServiceProvider;
 use App\User;
+use Illuminate\Http\Request;
 use Illuminate\Foundation\Auth\RegistersUsers;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Validator;
@@ -29,10 +30,13 @@ class RegisterController extends Controller
     /**
      * Where to redirect users after registration.
      *
-     * @var string
+     * 
      */
-    protected $redirectTo = RouteServiceProvider::HOME;
-
+    /*protected $redirectTo = RouteServiceProvider::HOME;*/
+    public function index()
+    {
+        return view('auth.login');
+    }
     /**
      * Create a new controller instance.
      *
@@ -55,6 +59,7 @@ class RegisterController extends Controller
             'name' => ['required', 'string', 'max:255'],
             'email' => ['required', 'string', 'email', 'max:255', 'unique:users'],
             'password' => ['required', 'string', 'min:8', 'confirmed'],
+            'role' => ['required', 'string'],
         ]);
     }
 
@@ -64,12 +69,21 @@ class RegisterController extends Controller
      * @param  array  $data
      * @return \App\User
      */
-    protected function create(array $data)
+    protected function store(Request $request)
     {
-        return User::create([
+        /*return User::create([
             'name' => $data['name'],
             'email' => $data['email'],
             'password' => Hash::make($data['password']),
-        ]);
+            $utilisateur->role = $request->role;
+        ]);*/
+
+        $utilisateur = new User ; 
+        $utilisateur->name = $request->name;
+        $utilisateur->email = $request->email;
+        $utilisateur->password = Hash::make($request['password']);
+        $utilisateur->role = $request->role;
+        $utilisateur->save();
+        return redirect()->route('registers.index' , $utilisateur)->with('storeUtilisateur' , 'utilisateur a été ajouté avec succès  !!!');
     }
 }

@@ -20,18 +20,13 @@
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
 </head>
 <body>
-
+<!-- navbar-->
     @include('layouts.navbar')
-    
-        <main class="py-4">
-
-            @yield('content')
-        </main>
-        <!-- Footer-->
-        <footer class="py-5 bg-dark">
-            <div class="container"><p class="m-0 text-center text-white">Copyright © Your Website 2021</p></div>
-
-        </footer>
+<!-- main-->
+    @yield('content')
+ <!----------------------------- footer ------------------------------>
+ @include('layouts.footer')
+        
     </div>
 </body>
 </html>

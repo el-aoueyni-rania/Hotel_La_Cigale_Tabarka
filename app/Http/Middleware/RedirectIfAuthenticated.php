@@ -22,7 +22,7 @@ class RedirectIfAuthenticated
 
            // return redirect(RouteServiceProvider::HOME);
 
-           if (Auth::user()->admin){
+           if (Auth::user()->role == 'admin'){
             return'/admin/dashboard';
         }
         return '/home';

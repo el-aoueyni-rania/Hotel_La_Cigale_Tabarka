@@ -1,5 +1,4 @@
 <?php
-
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -11,14 +10,18 @@
 |
 */
 
+use Illuminate\Routing\Route;
+use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Route as FacadesRoute;
+
 Route::get('/','HomeController@welcome') ;
 Auth::routes();
 
 
 route::middleware('auth')->group(function() {
-    Route::get('/home', 'HomeController@index')->name('home');
-    Route::get('/welcome', 'HomeController@welcome')->name('welcome');
-
+Route::get('/home', 'HomeController@index')->name('home');
+Route::get('/welcome', 'HomeController@welcome')->name('welcome');
+Route::resource('registers', 'Auth\RegisterController');
 
     // admin middlewere route group
     route::middleware('admin')->namespace('Admin')->prefix('admin')->group(function()

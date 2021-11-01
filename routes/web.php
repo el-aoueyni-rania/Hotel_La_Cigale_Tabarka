@@ -15,9 +15,10 @@ Route::get('/','HomeController@welcome') ;
 Auth::routes();
 
 
-route::middleware('auth')->group(function() {
+    route::middleware('auth')->group(function() {
     Route::get('/home', 'HomeController@index')->name('home');
     Route::get('/welcome', 'HomeController@welcome')->name('welcome');
+    Route::get('/gallerie', 'HomeController@gallerie')->name('gallerie');
     Route::resource('registers', 'Auth\RegisterController');
 
     // admin middlewere route group

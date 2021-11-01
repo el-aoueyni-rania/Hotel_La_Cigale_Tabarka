@@ -86,15 +86,6 @@
             </a>
           </li>
           <li class="nav-item">
-
-           <a class="nav-link" href="{{route('bienetres.index')}}">
-            <i class="fas fa-smile-beam"></i>
-              Bien Etres
-
-
-            </a>
-          </li>
-          <li class="nav-item">
             <a class="nav-link" href="{{route('users.index')}}">
               <span data-feather="users"></span>
               Utilisateurs

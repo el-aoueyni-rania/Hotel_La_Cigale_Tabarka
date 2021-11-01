@@ -12,7 +12,7 @@ class ActivitesTableSeeder extends Seeder
      */
     public function run()
     {
-        factory(Activite::class,4)->create();
+        factory(Activite::class,20)->create();
     }
 
 }

@@ -20,7 +20,7 @@ Auth::routes();
     Route::get('/welcome', 'HomeController@welcome')->name('welcome');
     Route::get('/gallerie', 'HomeController@gallerie')->name('gallerie');
     Route::resource('registers', 'Auth\RegisterController');
-
+    Route::resource('services2', 'User\ServiceController');
     // admin middlewere route group
     route::middleware('role')->namespace('Admin')->prefix('admin')->group(function()
     {
@@ -33,7 +33,6 @@ Auth::routes();
         Route::resource('restaurations', 'RestaurationController');
         Route::resource('reservations','ReservationController');
         Route::resource('users','UserController');
-        Route::resource('bienetres', 'BienetreController');
         Route::resource('services', 'ServiceController');
     });
 });

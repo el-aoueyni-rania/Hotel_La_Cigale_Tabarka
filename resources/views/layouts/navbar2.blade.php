@@ -29,10 +29,7 @@
                                 <a style="color: white" class="nav-link" href="{{route('restaurations.index')}}">Restaurations</a>
                               </li>
                               <li class="nav-item">
-                                <a style="color: white" class="nav-link" href="{{route('activites.index')}}">Activités</a>
-                              </li>
-                              <li class="nav-item">
-                                <a style="color: white" class="nav-link " href="{{route('services.index')}}">Services</a>
+                                <a style="color: white" class="nav-link " href="{{route('services2.index')}}">Services</a>
                               </li>
                               <li class="nav-item">
                                 <a style="color: white" class="nav-link " href="{{route('gallerie')}}">Gallerie</a>

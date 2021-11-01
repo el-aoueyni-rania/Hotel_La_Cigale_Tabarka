@@ -18,7 +18,7 @@ Auth::routes();
 route::middleware('auth')->group(function() {
     Route::get('/home', 'HomeController@index')->name('home');
     Route::get('/welcome', 'HomeController@welcome')->name('welcome');
-
+    Route::resource('registers', 'Auth\RegisterController');
 
     // admin middlewere route group
     route::middleware('admin')->namespace('Admin')->prefix('admin')->group(function()

@@ -6,7 +6,7 @@
     <div class="row justify-content-center">
         <div class="col-md-8">
             <div class="card">
-                <div class="card-header">{{ __('Register') }}</div>
+                <div class="card-header">{{ __('registers.create') }}</div>
 
                 <div class="card-body">
                     <form method="POST" action="{{ route('register') }}">
@@ -64,7 +64,7 @@
                         <div class="form-group row">
                             <label for="password-confirm" class="col-md-4 col-form-label text-md-right">{{ __('Role') }}</label>
                         <div class="col-md-6">
-                        <select id="role" name="role" class="form-select form-select-lg mb-3" aria-label=".form-select-lg example">
+                        <select id="admin" name="role" class="form-select form-select-lg mb-3" aria-label=".form-select-lg example">
                             <option  value="admin">Admin</option>
                             <option  value="user">Utilisateur</option>
                           </select>

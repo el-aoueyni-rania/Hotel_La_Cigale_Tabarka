@@ -19,7 +19,7 @@ class CheckIfAdmin
     {
 
 
-        if(!Auth::user()->admin){
+        if(Auth::user()->role == 'user'){
             return redirect('home');
 
         }

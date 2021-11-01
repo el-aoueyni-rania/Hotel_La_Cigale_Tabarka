@@ -38,7 +38,7 @@
   </head>
   <body>
 
-@include('layouts.navbar')
+@include('layouts.navbar1')
 
 
 <div class="container-fluid">

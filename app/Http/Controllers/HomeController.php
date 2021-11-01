@@ -30,7 +30,10 @@ class HomeController extends Controller
        return view('home');
     }
 
-    
+    public function gallerie()
+    {
+        return view('utilisateur.gallerie');
+     }
 
     public function welcome()
     {
@@ -45,12 +48,7 @@ public function redirectTo(){
 return '/home';
 }
 
-    public function bienetre()
-    {
-        $bienetres=bienetre::inRandomOrder()->limit(10)->get();
-        return view('bienetre' ,['bienetres'=> $bienetres]);
-        //return view('userRoles' , ['user_roles' => $userRoles]);
-    }
+   
 
 
 }

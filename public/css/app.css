@@ -16443,3 +16443,18 @@ readers do not read off random characters that represent icons */
 
   box-shadow: 5px 5px 5px white;
 }
+.gr1{
+  display: grid;
+  grid-template-columns: 5fr 5fr; 
+}
+.kk
+{
+  border: solid black;
+  border-radius: 10px;
+  margin: 5px;
+  box-shadow: 5px 5px 5px black;
+}
+.im1{
+  width: 660px;
+  height: 450px;
+}

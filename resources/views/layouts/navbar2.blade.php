@@ -23,10 +23,10 @@
                                 <a style="color: white" class="nav-link active" aria-current="page" href="{{route('home')}}"><i class="fas fa-home"></i></a>
                               </li>
                             <li  class="nav-item">
-                                <a style="color: white" class="nav-link active" aria-current="page" href="#">Reservations</a>
+                                <a style="color: white" class="nav-link active" aria-current="page" href="{{route('reservations2.index')}}">Reservations</a>
                               </li>
                               <li class="nav-item">
-                                <a style="color: white" class="nav-link" href="{{route('restaurations.index')}}">Restaurations</a>
+                                <a style="color: white" class="nav-link" href="{{route('restaurations2.index')}}">Restaurations</a>
                               </li>
                               <li class="nav-item">
                                 <a style="color: white" class="nav-link " href="{{route('services2.index')}}">Services</a>

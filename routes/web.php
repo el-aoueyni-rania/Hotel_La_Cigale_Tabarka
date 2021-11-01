@@ -21,6 +21,9 @@ Auth::routes();
     Route::get('/gallerie', 'HomeController@gallerie')->name('gallerie');
     Route::resource('registers', 'Auth\RegisterController');
     Route::resource('services2', 'User\ServiceController');
+    Route::resource('reservations2', 'User\ReservationController');
+    Route::resource('restaurations2', 'User\RestaurationController');
+
     // admin middlewere route group
     route::middleware('role')->namespace('Admin')->prefix('admin')->group(function()
     {

@@ -11,6 +11,6 @@ class RestaurationsTableSeeder extends Seeder
      */
     public function run()
     {
-        factory(Restauration::class,7)->create();
+        factory(Restauration::class,10)->create();
     }
 }

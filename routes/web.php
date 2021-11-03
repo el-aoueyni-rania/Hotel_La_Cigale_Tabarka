@@ -22,8 +22,6 @@ Auth::routes();
     Route::resource('registers', 'Auth\RegisterController');
     Route::resource('activites2', 'User\ActiviteController');
     Route::resource('reservations2', 'User\ReservationController');
-    Route::resource('restaurations2', 'User\RestaurationController');
-
     // admin middlewere route group
     route::middleware('role')->namespace('Admin')->prefix('admin')->group(function()
     {
@@ -33,9 +31,7 @@ Auth::routes();
 
          
         Route::resource('activites', 'ActiviteController');
-        Route::resource('restaurations', 'RestaurationController');
         Route::resource('reservations','ReservationController');
         Route::resource('users','UserController');
-        Route::resource('services', 'ServiceController');
     });
 });

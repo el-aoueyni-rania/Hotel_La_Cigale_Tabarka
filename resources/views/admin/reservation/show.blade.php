@@ -6,7 +6,7 @@
 {{session ('storeReservation')}}
  <button type="button" class="close" data-dismiss="alert" aria-label="Close">
  <span aria-hidden="true">&times;</span>
- </bytton>
+ </button>
 </div>
 @endif
 @if(session('updateReservation'))
@@ -14,7 +14,7 @@
 {{session ('updateReservation')}}
  <button type="button" class="close" data-dismiss="alert" aria-label="Close">
  <span aria-hidden="true">&times;</span>
- </bytton>
+ </button>
 </div>
 @endif  
 <h3> <i class="fas fa-info-circle"></i> Détails du réservation numéro <strong>{{$reservation->id}} :</strong></h3>

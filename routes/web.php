@@ -20,7 +20,7 @@ Auth::routes();
     Route::get('/welcome', 'HomeController@welcome')->name('welcome');
     Route::get('/gallerie', 'HomeController@gallerie')->name('gallerie');
     Route::resource('registers', 'Auth\RegisterController');
-    Route::resource('services2', 'User\ServiceController');
+    Route::resource('activites2', 'User\ActiviteController');
     Route::resource('reservations2', 'User\ReservationController');
     Route::resource('restaurations2', 'User\RestaurationController');
 

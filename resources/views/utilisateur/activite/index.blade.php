@@ -3,14 +3,6 @@
 @section('content')
 <div class="container">
     <div class="justify-content-center">
-        <div>
-            <h1>Services</h1>
-            <ul class=" lu">
-                @foreach ($services as $key => $service)
-                    <li>{{ $service->nom }}</li>
-                @endforeach
-            </ul>
-        </div>
        <div>
         <h1>Activités</h1>
         <ul class=" lu">

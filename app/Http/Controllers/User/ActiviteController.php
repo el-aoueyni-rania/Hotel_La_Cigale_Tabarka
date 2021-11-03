@@ -3,10 +3,10 @@
 namespace App\Http\Controllers\User;
 
 use App\Http\Controllers\Controller;
-use App\Restauration;
+use App\Activite;
 use Illuminate\Http\Request;
 
-class RestaurationController extends Controller
+class ActiviteController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -15,7 +15,7 @@ class RestaurationController extends Controller
      */
     public function index()
     {
-        return view('utilisateur.restauration.index' , ['restaurations' => Restauration::paginate(5)]);
+        return view('utilisateur.activite.index' ,['activites'=> Activite::all()] );
     }
 
     /**

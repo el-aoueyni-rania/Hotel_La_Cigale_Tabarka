@@ -26,13 +26,7 @@
                                 <a style="color: white" class="nav-link active" aria-current="page" href="{{route('reservations.index')}}">Reservations</a>
                               </li>
                               <li class="nav-item">
-                                <a style="color: white" class="nav-link" href="{{route('restaurations.index')}}">Restaurations</a>
-                              </li>
-                              <li class="nav-item">
                                 <a style="color: white" class="nav-link" href="{{route('activites.index')}}">Activités</a>
-                              </li>
-                              <li class="nav-item">
-                                <a style="color: white" class="nav-link " href="{{route('services.index')}}">Services</a>
                               </li>
                               <li class="nav-item">
                                 <a style="color: white" class="nav-link " href="{{route('users.index')}}">Utilisateurs</a>

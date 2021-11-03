@@ -69,20 +69,9 @@
             </a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="{{route('restaurations.index')}}">
-            <i class="fas fa-utensils"></i>              Restaurations
-            </a>
-          </li>
-          <li class="nav-item">
             <a class="nav-link" href="{{route('activites.index')}}">
               <!-- <span data-feather="users"></span> -->
               <i class="fas fa-snowboarding"></i>    Activités
-            </a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="{{route('services.index')}}">
-            <i class="fas fa-concierge-bell"></i>              Services
-
             </a>
           </li>
           <li class="nav-item">

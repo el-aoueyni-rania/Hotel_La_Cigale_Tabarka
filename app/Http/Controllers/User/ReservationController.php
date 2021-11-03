@@ -27,7 +27,7 @@ class ReservationController extends Controller
      */
     public function create()
     {
-        //
+        return view('utilisateur.reservation.create')->with('storeReservation',"Réservation ajoutée avec succées");
     }
 
     /**
@@ -38,7 +38,9 @@ class ReservationController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $validatedData = $request->validate($this->validationRules());
+        $reservation = Reservation::create($validatedData);
+        return redirect()->route('reservations2.index',$reservation)->with('storeReservation',"Réservation ajoutée avec succées");
     }
 
     /**
@@ -60,7 +62,7 @@ class ReservationController extends Controller
      */
     public function edit($id)
     {
-        //
+        //return view('utilisateur.reservation.edit',['reservation' => $reservation]);
     }
 
     /**
@@ -72,7 +74,11 @@ class ReservationController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        // $validatedData = $request->validate($this->validationRules());
+        // $reservation->update($validatedData);
+        // return redirect()->route('reservations2.index',$reservation)->with('updateReservation',"Réservation modifiée avec succées");
+
+
     }
 
     /**
@@ -83,6 +89,19 @@ class ReservationController extends Controller
      */
     public function destroy($id)
     {
-        //
+        // $reservation->delete();
+        // return redirect()->route('reservations2.index')->with('deleteReservation','La Reservation est supprimée!');
+    }
+    private function validationRules(){
+        return [
+            'Client_name' => 'required',
+            'date_arrivee' => 'required',
+            'nbr_nuits' => 'required',
+            'nbr_chambres' => 'required',
+            'nbr_adultes' => 'required',
+            'nbr_enfants' => 'required',
+            'user_id' => 'required',
+        ];
+
     }
 }
